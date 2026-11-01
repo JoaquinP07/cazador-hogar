@@ -2,11 +2,11 @@ name: Sondeo de tiendas
 on:
   workflow_dispatch:
   push:
-    paths: ["herramientas/sondeo.py", ".github/workflows/sondeo.yml"]
+    paths: ["herramientas/**", ".github/workflows/sondeo.yml"]
 jobs:
   sondeo:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: pip install -q requests
-      - run: python herramientas/sondeo.py https://www.sodimac.com.uy https://www.herracor.com.uy https://ferreteriaarocena.com.uy https://www.divino.com.uy https://jysk.uy https://www.mosca.com.uy https://www.latentacion.com.uy https://www.brillante.com.uy https://rusticohogar.com.uy https://mundoshop.com.uy https://viaconfort.com.uy https://grupodos.com.uy https://balton.com.uy https://www.arredo.com.uy https://www.geant.com.uy https://www.disco.com.uy https://www.tata.com.uy https://www.multiahorro.com.uy https://www.tiendainglesa.com.uy https://www.zarahome.com/uy/ https://www.elclon.com.uy https://www.barraca-europa.com.uy https://www.pinturasinca.com.uy https://www.ferreteriaamericana.com.uy https://www.homecenter.com.uy https://www.unitedhome.com.uy https://www.casarey.com.uy
+      - run: python herramientas/descubrir.py

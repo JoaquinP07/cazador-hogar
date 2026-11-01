@@ -1,0 +1,68 @@
+"""Revisión completa: lee las tiendas, compara con el historial y avisa por Telegram.
+
+Uso:
+  python -m cazador            # revisión normal
+  python -m cazador --prueba   # además guarda una muestra en reporte/ y manda un mensaje de prueba
+"""
+from __future__ import annotations
+
+import json
+import pathlib
+import sys
+import time
+import traceback
+
+from . import telegram
+from .nucleo import Historial, fmt
+from .tiendas import DETALLE, TIENDAS
+
+HISTORIAL = pathlib.Path("estado/historial.json")
+
+
+def main() -> int:
+    prueba = "--prueba" in sys.argv
+    hist = Historial(HISTORIAL)
+    tiendas_conocidas = {k.split(":", 1)[0] for k in hist.datos}
+    resumen, muestras, avisos = {}, {}, 0
+    inicio = time.time()
+
+    for nombre, leer in TIENDAS.items():
+        t0 = time.time()
+        try:
+            prods = leer()
+        except Exception:  # una tienda caída no frena a las demás
+            traceback.print_exc()
+            resumen[nombre] = "error"
+            continue
+        resumen[nombre] = f"{len(prods)} productos en {time.time() - t0:.0f}s"
+        muestras[nombre] = [p.__dict__ for p in prods[:15]]
+        for p in prods:
+            motivo = hist.evaluar(p)
+            # Una tienda sin historial todavía (recién agregada) solo aprende, no avisa.
+            if motivo and nombre in tiendas_conocidas:
+                avisos += 1
+                print("AVISO:", p.tienda, p.nombre, fmt(p.precio, p.moneda), motivo)
+                telegram.enviar(telegram.aviso(p, motivo))
+        print(f"{nombre}: {resumen[nombre]}")
+
+    hist.limpiar()
+    hist.guardar()
+    duracion = time.time() - inicio
+    print(f"Listo en {duracion:.0f}s · {len(hist.datos)} productos en historial · {avisos} avisos")
+
+    if prueba:
+        lineas = "\n".join(f"• {k}: {v}" for k, v in resumen.items())
+        ok = telegram.enviar(f"✅ <b>Cazador de ofertas conectado</b>\nRevisión de prueba:\n{lineas}")
+        rep = pathlib.Path("reporte")
+        rep.mkdir(exist_ok=True)
+        (rep / "resumen.json").write_text(
+            json.dumps({"tiendas": resumen, "duracion_s": round(duracion), "historial": len(hist.datos),
+                        "telegram": "enviado" if ok else telegram.ULTIMO_ERROR,
+                        "diagnostico": None if ok else telegram.diagnostico(), "detalle": DETALLE},
+                       ensure_ascii=False, indent=2), encoding="utf-8")
+        (rep / "muestras.json").write_text(json.dumps(muestras, ensure_ascii=False, indent=1), encoding="utf-8")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
