@@ -11,6 +11,7 @@ import pathlib
 import sys
 import time
 import traceback
+from concurrent.futures import ThreadPoolExecutor
 
 from . import telegram
 from .nucleo import Historial, fmt
@@ -26,20 +27,30 @@ def main() -> int:
     resumen, muestras, avisos = {}, {}, 0
     inicio = time.time()
 
-    for nombre, leer in TIENDAS.items():
+    # Las tiendas se leen en paralelo (cada una a su ritmo); después se evalúan en orden.
+    def leer_tienda(item):
+        nombre, leer = item
         t0 = time.time()
         try:
-            prods = leer()
+            return nombre, leer(), time.time() - t0
         except Exception:  # una tienda caída no frena a las demás
             traceback.print_exc()
+            return nombre, None, time.time() - t0
+
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        lecturas = list(ex.map(leer_tienda, TIENDAS.items()))
+
+    for nombre, prods, seg in lecturas:
+        if prods is None:
             resumen[nombre] = "error"
+            print(f"{nombre}: error")
             continue
-        resumen[nombre] = f"{len(prods)} productos en {time.time() - t0:.0f}s"
-        muestras[nombre] = [p.__dict__ for p in prods[:15]]
-        por_rubro = {}
+        por_rubro: dict[str, int] = {}
         for p in prods:
-            por_rubro[p.extra.get("rubro", "?")] = por_rubro.get(p.extra.get("rubro", "?"), 0) + 1
-        resumen[nombre] += " (" + ", ".join(f"{k}: {v}" for k, v in por_rubro.items()) + ")"
+            r = p.extra.get("rubro", "?")
+            por_rubro[r] = por_rubro.get(r, 0) + 1
+        resumen[nombre] = f"{len(prods)} productos en {seg:.0f}s (" + ", ".join(f"{k}: {v}" for k, v in por_rubro.items()) + ")"
+        muestras[nombre] = [p.__dict__ for p in prods[:15]]
         for p in prods:
             motivo = hist.evaluar(p)
             # Una tienda sin historial todavía (recién agregada) solo aprende, no avisa.
@@ -56,7 +67,7 @@ def main() -> int:
 
     if prueba:
         lineas = "\n".join(f"• {k}: {v}" for k, v in resumen.items())
-        ok = telegram.enviar(f"✅ <b>Cazador Hogar: revisión de prueba</b>\nRevisión de prueba:\n{lineas}")
+        ok = telegram.enviar(f"✅ <b>Cazador Hogar: revisión de prueba</b>\n{lineas}")
         rep = pathlib.Path("reporte")
         rep.mkdir(exist_ok=True)
         (rep / "resumen.json").write_text(

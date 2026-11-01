@@ -92,7 +92,7 @@ def _fenicio_pagina(texto: str, tienda: str) -> list[Producto]:
     return prods
 
 
-def fenicio(tienda: str, base: str, categorias: Iterable[str], max_paginas: int = 120) -> list[Producto]:
+def fenicio(tienda: str, base: str, categorias: Iterable[str], max_paginas: int = 320) -> list[Producto]:
     vistos: dict[str, Producto] = {}
     for cat in categorias:
         total = None
@@ -336,7 +336,9 @@ def mezcla(*partes: tuple[str, Callable[[], list[Producto]]]) -> Callable[[], li
 # ---------------------------------------------------------------- Configuración
 TIENDAS: dict[str, Callable[[], list[Producto]]] = {
     "Sodimac": mezcla(
-        (FERRETERIA, lambda: sodimac("Sodimac", ["cat20862"])),  # Herramientas y maquinarias
+        # Herramientas y maquinarias; la web muestra hasta ~30 páginas por categoría,
+        # por eso se suman aparte las eléctricas/inalámbricas y la maquinaria de jardín.
+        (FERRETERIA, lambda: sodimac("Sodimac", ["cat20888", "cat20322", "cat20862"])),
         (HOGAR, lambda: sodimac("Sodimac", [
             "cat20002",  # Muebles
             "cat20058",  # Colchones y sommiers
@@ -353,8 +355,7 @@ TIENDAS: dict[str, Callable[[], list[Producto]]] = {
     ]))),
     "El Clon": mezcla((HOGAR, lambda: fenicio("El Clon", "https://www.elclon.com.uy", ["hogar", "tiempo-libre"]))),
     "Divino": mezcla((HOGAR, lambda: fenicio("Divino", "https://www.divino.com.uy", [
-        "living", "comedor", "dormitorios", "colchones-y-sommiers", "bazar-y-decoracion", "exteriores",
-        "iluminacion", "oficina", "textiles", "organizacion-del-hogar", "cocinas", "banos", "kids", "zona-outlet",
+        "living", "comedor", "colchones-y-sommiers", "exteriores", "oficina", "organizacion-del-hogar", "zona-outlet",
     ]))),
     "JYSK": mezcla((HOGAR, lambda: fenicio("JYSK", "https://www.jysk.uy", [
         "almacenaje", "bano", "comedor", "cortinas", "dormitorio", "hogar-y-decoracion", "jardin", "living", "oficina",
@@ -363,12 +364,9 @@ TIENDAS: dict[str, Callable[[], list[Producto]]] = {
         (HOGAR, lambda: fenicio("La Tentación", "https://www.latentacion.com.uy", ["hogar"])),
         (FERRETERIA, lambda: fenicio("La Tentación", "https://www.latentacion.com.uy", ["construccion"])),
     ),
-    "Brillante": mezcla(
-        (HOGAR, lambda: fenicio("Brillante", "https://www.brillante.com.uy", [
-            "muebles", "bazar", "aire-libre", "colchones-y-sommiers", "calefaccion",
-        ])),
-        (FERRETERIA, lambda: fenicio("Brillante", "https://www.brillante.com.uy", ["herramientas"])),
-    ),
+    "Brillante": mezcla((HOGAR, lambda: fenicio("Brillante", "https://www.brillante.com.uy", [
+        "muebles", "bazar", "aire-libre", "colchones-y-sommiers", "calefaccion",
+    ]))),
     "Rústico Hogar": mezcla((HOGAR, lambda: fenicio("Rústico Hogar", "https://rusticohogar.com.uy", [
         "living", "comedor", "dormitorio", "oficina", "cocina", "bazar-y-deco", "colchones-y-sommiers",
         "jardin-exterior", "textiles-del-hogar", "iluminacion", "decoracion", "sale",
