@@ -1,37 +1,35 @@
-"""Diagnóstico 2: Tata hogar, Sodimac y Fenicio."""
+"""Diagnóstico 3: Brillante y paginación/categorías de Sodimac."""
 import json, re, sys
 sys.path.insert(0, ".")
-from cazador.tiendas import _get, _fenicio_pagina
+from cazador.tiendas import _get
 
-for slug in ["hogar-y-bazar","bazar-y-hogar","textil","textiles","textil-y-hogar","blanqueria","muebles-y-decoracion","jardin-y-aire-libre","aire-libre-y-jardin","aire-libre","automovil","ferreteria-y-automovil","camping-y-playa","deportes-y-aire-libre","muebles-y-jardin","exterior","organizacion","iluminacion","bazar-cocina-y-mesa","bazar-y-cocina","mascotas","hogar-y-limpieza","limpieza-y-hogar","decoracion-y-hogar","muebles-y-colchones","colchones","cama-y-bano","dormitorio","libreria-y-papeleria","jugueteria","juguetes","deportes"]:
-    v = {"first": 1, "after": "0", "sort": "price_asc", "term": "", "selectedFacets": [{"key": "category-1", "value": slug}]}
-    r = _get("https://www.tata.com.uy/api/graphql", params={"operationName": "ProductsQuery", "variables": json.dumps(v)})
-    try: t = r.json()["data"]["search"]["products"]["pageInfo"]["totalCount"]
-    except Exception: t = "?"
-    if t: print(f"TATA {slug}: {t}")
-for u in ["https://www.tata.com.uy/sitemap.xml", "https://www.tata.com.uy/sitemap/category-0.xml", "https://www.tata.com.uy/robots.txt"]:
-    r = _get(u); print("TATA", u, r.status_code, r.text[:800].replace("\n", " "))
+r = _get("https://www.brillante.com.uy/herramientas?js=1&pag=1")
+i = r.text.find("precio")
+print("BRI len", len(r.text), "data-total" in r.text)
+for m in list(re.finditer(r"<div class=['\"]it ", r.text))[:1]:
+    print("BRI it:", r.text[m.start():m.start()+2500])
+if not re.search(r"<div class=['\"]it ", r.text):
+    print("BRI raw:", r.text[i-1500:i+1500])
 
 def nd(url):
     r = _get(url)
     m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', r.text, re.S)
-    return r.status_code, (json.loads(m.group(1))["props"]["pageProps"] if m else None)
-st, pp = nd("https://www.sodimac.com.uy/sodimac-uy/category/cat20888/Herramientas-electricas-e-inalambricas")
-sd = pp["searchProps"]["searchData"]
-print("SOD pagination", json.dumps(sd.get("pagination")), "keys", list(sd.keys()))
-print("SOD item", json.dumps(sd["results"][0], ensure_ascii=False)[:2500])
-cd = pp["categoryProps"]["categoryData"]["results"]
-print("SOD cat", json.dumps(cd, ensure_ascii=False)[:1500])
-st2, pp2 = nd("https://www.sodimac.com.uy/sodimac-uy/category/cat20888/Herramientas-electricas-e-inalambricas?page=2")
-print("SOD p2", st2, [x.get("productId") for x in pp2["searchProps"]["searchData"]["results"][:3]] if pp2 else None, [x.get("productId") for x in sd["results"][:3]])
-r = _get("https://www.sodimac.com.uy/sodimac-uy")
+    return (json.loads(m.group(1))["props"]["pageProps"] if m else None), r
+base = "https://www.sodimac.com.uy/sodimac-uy/category/cat20888/Herramientas-electricas-e-inalambricas"
+for q in ["?page=2", "?currentpage=2", "?pageNo=2", "?page=2&store=sodimac", "?sortBy=_score&page=2"]:
+    pp, r = nd(base + q)
+    if pp:
+        sd = pp["searchProps"]["searchData"]
+        print("SOD", q, sd.get("pagination"), [x["productId"] for x in sd["results"][:3]])
+pp, r = nd(base)
+print("SOD endPoints", json.dumps(pp["searchProps"]["searchData"].get("endPoints"))[:800])
+for u in re.findall(r'https://[a-z.]*(?:falabella|sodimac)[a-z.]*/s/[^"\\ ]{0,120}', r.text)[:10]: print("SOD api?", u)
+for c in ["cat20862", "cat20002", "cat20104", "cat20228", "cat20278", "cat20322", "cat20130", "cat20204", "cat20288"]:
+    pp, r = nd(f"https://www.sodimac.com.uy/sodimac-uy/category/{c}/x")
+    if not pp: print("SOD", c, r.status_code, "sin datos"); continue
+    sd = pp["searchProps"]["searchData"]; cd = pp["categoryProps"]["categoryData"]["results"]
+    print("SOD", c, cd.get("displayName"), sd.get("pagination"), [b["name"] for b in cd.get("breadcrumbs", [])])
+pp, r = nd("https://www.sodimac.com.uy/sodimac-uy")
+print("SOD home keys", list((pp or {}).keys()))
 txt = r.text
-for m in re.finditer(r'"(?:label|name|title)":"([^"]{3,40})","(?:link|url|href)":"(/sodimac-uy/category/cat\d+/[^"?]+)', txt):
-    print("SODMENU", m.group(1), m.group(2))
-print("SOD top", sorted(set(re.findall(r'/sodimac-uy/category/(cat\d{4,5}/[A-Za-z0-9-]+)', txt)))[:80])
-
-for b, c in [("https://ferreteriaarocena.com.uy","herramientas"),("https://www.elclon.com.uy","hogar"),("https://www.divino.com.uy","living"),("https://www.jysk.uy","dormitorio"),("https://www.latentacion.com.uy","hogar"),("https://www.brillante.com.uy","herramientas"),("https://rusticohogar.com.uy","living")]:
-    r = _get(f"{b}/{c}?js=1&pag=1")
-    t = re.search(r'data-total="(\d+)"', r.text)
-    ps = _fenicio_pagina(r.text, "x")
-    print("FEN", b, c, r.status_code, t.group(1) if t else None, len(ps), ps[0].nombre if ps else "", ps[0].precio if ps else "", ps[0].precio_lista if ps else "", ps[0].url if ps else "")
+print("SOD roots", sorted(set(re.findall(r'"(cat\d{5})"[^{}]{0,80}"(?:name|label|displayName)":"([^"]+)"', txt)))[:60])
