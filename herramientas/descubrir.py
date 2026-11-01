@@ -1,64 +1,37 @@
-"""Descubre categorías y formatos de las tiendas candidatas (solo diagnóstico)."""
+"""Diagnóstico 2: Tata hogar, Sodimac y Fenicio."""
 import json, re, sys
 sys.path.insert(0, ".")
 from cazador.tiendas import _get, _fenicio_pagina
 
-FENICIO = {"Arocena": "https://ferreteriaarocena.com.uy", "El Clon": "https://www.elclon.com.uy",
-           "Divino": "https://www.divino.com.uy", "JYSK": "https://www.jysk.uy", "La Tentacion": "https://www.latentacion.com.uy",
-           "Brillante": "https://www.brillante.com.uy", "Rustico": "https://rusticohogar.com.uy"}
-for n, b in FENICIO.items():
-    r = _get(b)
-    rutas = sorted(set(re.findall(r'href="(?:' + re.escape(b) + r')?/([a-z0-9][a-z0-9-]+)"', r.text)))
-    print(f"\n=== FENICIO {n}: {len(rutas)} rutas")
-    print(" ".join(rutas)[:3000])
-
-for n, b in {"Balton": "https://balton.com.uy", "MundoShop": "https://mundoshop.com.uy"}.items():
-    r = _get(f"{b}/products.json?limit=250&page=1")
-    try:
-        ps = r.json().get("products", [])
-        print(f"\n=== SHOPIFY {n}: HTTP {r.status_code} pag1={len(ps)}", [p['product_type'] for p in ps[:40]])
-        if ps: print("  ej:", ps[0]["title"], ps[0]["variants"][0]["price"], ps[0]["variants"][0].get("compare_at_price"))
-    except Exception as e:
-        print(f"\n=== SHOPIFY {n}: HTTP {r.status_code} {e} {r.text[:200]}")
-
-r = _get("https://www.arredo.com.uy/api/catalog_system/pub/category/tree/1")
-print("\n=== ARREDO tree", r.status_code, r.text[:1500])
-r = _get("https://www.arredo.com.uy/api/catalog_system/pub/products/search?_from=0&_to=2")
-print("=== ARREDO search", r.status_code, r.headers.get("resources"), r.text[:600])
-
-for slug in ["hogar","bazar","ferreteria","ferreteria-y-bricolaje","jardin","jardin-y-exterior","muebles","decoracion","textil-hogar","aire-libre","bano","camping","bricolaje","herramientas","hogar-y-deco","verano","piscinas","muebles-y-deco","bazar-y-cocina","cocina"]:
+for slug in ["hogar-y-bazar","bazar-y-hogar","textil","textiles","textil-y-hogar","blanqueria","muebles-y-decoracion","jardin-y-aire-libre","aire-libre-y-jardin","aire-libre","automovil","ferreteria-y-automovil","camping-y-playa","deportes-y-aire-libre","muebles-y-jardin","exterior","organizacion","iluminacion","bazar-cocina-y-mesa","bazar-y-cocina","mascotas","hogar-y-limpieza","limpieza-y-hogar","decoracion-y-hogar","muebles-y-colchones","colchones","cama-y-bano","dormitorio","libreria-y-papeleria","jugueteria","juguetes","deportes"]:
     v = {"first": 1, "after": "0", "sort": "price_asc", "term": "", "selectedFacets": [{"key": "category-1", "value": slug}]}
     r = _get("https://www.tata.com.uy/api/graphql", params={"operationName": "ProductsQuery", "variables": json.dumps(v)})
     try: t = r.json()["data"]["search"]["products"]["pageInfo"]["totalCount"]
     except Exception: t = "?"
-    print(f"TATA {slug}: {t}")
-r = _get("https://www.tata.com.uy")
-print("TATA links:", " ".join(sorted(set(re.findall(r'href="/([a-z0-9-]+)"', r.text))))[:2500])
+    if t: print(f"TATA {slug}: {t}")
+for u in ["https://www.tata.com.uy/sitemap.xml", "https://www.tata.com.uy/sitemap/category-0.xml", "https://www.tata.com.uy/robots.txt"]:
+    r = _get(u); print("TATA", u, r.status_code, r.text[:800].replace("\n", " "))
 
-for b in ["https://www.disco.com.uy", "https://www.geant.com.uy", "https://www.devoto.com.uy"]:
-    r = _get(b)
-    print(f"\n=== {b}", r.status_code, "blazor" if "blazor" in r.text.lower() else "", "vtex" if "vtex" in r.text.lower() else "")
-    print(" ".join(sorted(set(re.findall(r'href="(?:' + re.escape(b) + r')?/?(products/category/[a-z0-9-]+/\d+)"', r.text))))[:2500])
-
-r = _get("https://www.sodimac.com.uy/sodimac-uy/category/cat20888/Herramientas-electricas-e-inalambricas")
-print("\n=== SODIMAC", r.status_code, len(r.text))
-m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', r.text, re.S)
-if m:
-    d = json.loads(m.group(1))
-    pp = d.get("props", {}).get("pageProps", {})
-    print("pageProps keys:", list(pp.keys())[:40])
-    def buscar(o, cam=""):
-        if isinstance(o, dict):
-            for k, v in o.items():
-                if k in ("results", "pagination", "products") : print("  ", cam + "/" + k, type(v).__name__, (len(v) if hasattr(v, "__len__") else v))
-                buscar(v, cam + "/" + k)
-        elif isinstance(o, list) and o and cam.count("/") < 6:
-            buscar(o[0], cam + "[0]")
-    buscar(pp)
-    res = pp.get("results") or []
-    if res: print(json.dumps(res[0], ensure_ascii=False)[:2000])
-    print("pagination:", json.dumps(pp.get("pagination"), ensure_ascii=False)[:500])
-else:
-    print(r.text[:1500])
+def nd(url):
+    r = _get(url)
+    m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', r.text, re.S)
+    return r.status_code, (json.loads(m.group(1))["props"]["pageProps"] if m else None)
+st, pp = nd("https://www.sodimac.com.uy/sodimac-uy/category/cat20888/Herramientas-electricas-e-inalambricas")
+sd = pp["searchProps"]["searchData"]
+print("SOD pagination", json.dumps(sd.get("pagination")), "keys", list(sd.keys()))
+print("SOD item", json.dumps(sd["results"][0], ensure_ascii=False)[:2500])
+cd = pp["categoryProps"]["categoryData"]["results"]
+print("SOD cat", json.dumps(cd, ensure_ascii=False)[:1500])
+st2, pp2 = nd("https://www.sodimac.com.uy/sodimac-uy/category/cat20888/Herramientas-electricas-e-inalambricas?page=2")
+print("SOD p2", st2, [x.get("productId") for x in pp2["searchProps"]["searchData"]["results"][:3]] if pp2 else None, [x.get("productId") for x in sd["results"][:3]])
 r = _get("https://www.sodimac.com.uy/sodimac-uy")
-print("SODIMAC cats:", " ".join(sorted(set(re.findall(r'/sodimac-uy/category/(cat\d+/[A-Za-z0-9-]+)', r.text))))[:4000])
+txt = r.text
+for m in re.finditer(r'"(?:label|name|title)":"([^"]{3,40})","(?:link|url|href)":"(/sodimac-uy/category/cat\d+/[^"?]+)', txt):
+    print("SODMENU", m.group(1), m.group(2))
+print("SOD top", sorted(set(re.findall(r'/sodimac-uy/category/(cat\d{4,5}/[A-Za-z0-9-]+)', txt)))[:80])
+
+for b, c in [("https://ferreteriaarocena.com.uy","herramientas"),("https://www.elclon.com.uy","hogar"),("https://www.divino.com.uy","living"),("https://www.jysk.uy","dormitorio"),("https://www.latentacion.com.uy","hogar"),("https://www.brillante.com.uy","herramientas"),("https://rusticohogar.com.uy","living")]:
+    r = _get(f"{b}/{c}?js=1&pag=1")
+    t = re.search(r'data-total="(\d+)"', r.text)
+    ps = _fenicio_pagina(r.text, "x")
+    print("FEN", b, c, r.status_code, t.group(1) if t else None, len(ps), ps[0].nombre if ps else "", ps[0].precio if ps else "", ps[0].precio_lista if ps else "", ps[0].url if ps else "")
