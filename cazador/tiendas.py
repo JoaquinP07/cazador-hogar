@@ -197,11 +197,11 @@ def faststore(tienda: str, base: str, categorias: Iterable[str]) -> list[Product
 
 
 # ---------------------------------------------------------------- VTEX clásico (Arredo)
-def vtex(tienda: str, base: str, maximo: int = 2500) -> list[Producto]:
+def vtex(tienda: str, base: str, maximo: int = 2500, fq: str | None = None) -> list[Producto]:
     vistos: dict[str, Producto] = {}
     desde, total = 0, None
     while desde < maximo:
-        r = _get(f"{base}/api/catalog_system/pub/products/search", params={"_from": desde, "_to": desde + 49})
+        r = _get(f"{base}/api/catalog_system/pub/products/search", params={"_from": desde, "_to": desde + 49, **({"fq": fq} if fq else {})})
         if r.status_code not in (200, 206):
             nota(f"  [{tienda}] desde {desde}: HTTP {r.status_code}")
             break
@@ -231,7 +231,7 @@ def vtex(tienda: str, base: str, maximo: int = 2500) -> list[Producto]:
         desde += 50
         if desde >= total:
             break
-    nota(f"  [{tienda}] {total} declarados")
+    nota(f"  [{tienda}] {fq or 'todo'}: {total} declarados")
     return list(vistos.values())
 
 
@@ -312,8 +312,48 @@ def sodimac(tienda: str, categorias: Iterable[str], max_paginas: int = 60) -> li
     return list(vistos.values())
 
 
+# ---------------------------------------------------------------- Magento 2 (El Emporio del Hogar; GraphQL público)
+_MAG_Q = (
+    "{products(search:\"\", pageSize:%d, currentPage:%d){total_count items{sku name url_key url_suffix stock_status "
+    "price_range{minimum_price{final_price{value currency} regular_price{value}}}}}}"
+)
+
+
+def magento(tienda: str, base: str, por_pagina: int = 100, max_paginas: int = 60) -> list[Producto]:
+    vistos: dict[str, Producto] = {}
+    total = None
+    for pag in range(1, max_paginas + 1):
+        r = _get(f"{base}/graphql", params={"query": _MAG_Q % (por_pagina, pag)})
+        try:
+            datos = r.json()["data"]["products"]
+        except (ValueError, KeyError, TypeError):
+            nota(f"  [{tienda}] pág {pag}: HTTP {r.status_code} {r.text[:150]}")
+            break
+        total = datos["total_count"]
+        for it in datos["items"]:
+            mp = it["price_range"]["minimum_price"]
+            precio, lista = mp["final_price"]["value"], (mp.get("regular_price") or {}).get("value")
+            if not precio:
+                continue
+            p = Producto(
+                tienda=tienda,
+                id=it["sku"],
+                nombre=it["name"].strip(),
+                precio=float(precio),
+                moneda="USD" if mp["final_price"].get("currency") == "USD" else "UYU",
+                url=f"{base}/{it['url_key']}{it.get('url_suffix') or ''}",
+                precio_lista=float(lista) if lista and lista > precio else None,
+                disponible=it.get("stock_status") == "IN_STOCK",
+            )
+            vistos[p.clave] = p
+        if pag * por_pagina >= total or not datos["items"]:
+            break
+    nota(f"  [{tienda}] {total} declarados")
+    return list(vistos.values())
+
+
 # ---------------------------------------------------------------- Rubros
-FERRETERIA, HOGAR = "Ferretería", "Hogar"
+FERRETERIA, HOGAR, JARDIN = "Ferretería", "Hogar", "Jardín"
 
 
 def rubro(nombre: str, prods: list[Producto]) -> list[Producto]:
@@ -323,7 +363,8 @@ def rubro(nombre: str, prods: list[Producto]) -> list[Producto]:
 
 
 def mezcla(*partes: tuple[str, Callable[[], list[Producto]]]) -> Callable[[], list[Producto]]:
-    """Une varias lecturas de una misma tienda, cada una con su rubro."""
+    """Une varias lecturas de una misma tienda, cada una con su rubro.
+    Si un producto aparece en dos, queda con el rubro de la primera."""
     def leer() -> list[Producto]:
         vistos: dict[str, Producto] = {}
         for r, f in partes:
@@ -336,41 +377,62 @@ def mezcla(*partes: tuple[str, Callable[[], list[Producto]]]) -> Callable[[], li
 # ---------------------------------------------------------------- Configuración
 TIENDAS: dict[str, Callable[[], list[Producto]]] = {
     "Sodimac": mezcla(
+        (JARDIN, lambda: sodimac("Sodimac", [
+            "cat20322",    # Maquinaria de jardín
+            "cat20278",    # Muebles de jardín
+            "cat20288",    # Piscinas
+            "cat2170003",  # Aire libre, jardín y mascotas
+        ])),
         # Herramientas y maquinarias; la web muestra hasta ~30 páginas por categoría,
-        # por eso se suman aparte las eléctricas/inalámbricas y la maquinaria de jardín.
-        (FERRETERIA, lambda: sodimac("Sodimac", ["cat20888", "cat20322", "cat20862"])),
+        # por eso se suman aparte las eléctricas/inalámbricas.
+        (FERRETERIA, lambda: sodimac("Sodimac", ["cat20888", "cat20862"])),
         (HOGAR, lambda: sodimac("Sodimac", [
             "cat20002",  # Muebles
             "cat20058",  # Colchones y sommiers
             "cat20104",  # Decoración
             "cat20228",  # Bazar
             "cat20204",  # Iluminación interior
-            "cat20288",  # Piscinas
         ])),
     ),
-    "Ferretería Arocena": mezcla((FERRETERIA, lambda: fenicio("Ferretería Arocena", "https://ferreteriaarocena.com.uy", [
-        "herramientas", "ferreteria-y-fijaciones", "electricidad-e-iluminacion", "jardin-y-riego",
-        "parrillas-y-aire-libre", "piscinas", "sanitaria-y-griferias", "calefaccion-y-climatizacion",
-        "pinturas-y-accesorios", "construccion-y-obra",
-    ]))),
+    "Ferretería Arocena": mezcla(
+        (JARDIN, lambda: fenicio("Ferretería Arocena", "https://ferreteriaarocena.com.uy", [
+            "jardin-y-riego", "parrillas-y-aire-libre", "piscinas",
+        ])),
+        (FERRETERIA, lambda: fenicio("Ferretería Arocena", "https://ferreteriaarocena.com.uy", [
+            "herramientas", "ferreteria-y-fijaciones", "electricidad-e-iluminacion", "sanitaria-y-griferias",
+            "calefaccion-y-climatizacion", "pinturas-y-accesorios", "construccion-y-obra",
+        ])),
+    ),
+    "El Dorado": mezcla(
+        (FERRETERIA, lambda: vtex("El Dorado", "https://www.eldorado.com.uy", fq="C:/5/")),
+        (HOGAR, lambda: vtex("El Dorado", "https://www.eldorado.com.uy", fq="C:/6/")),
+        (JARDIN, lambda: vtex("El Dorado", "https://www.eldorado.com.uy", fq="C:/9/")),  # Temporada
+    ),
+    "El Emporio del Hogar": mezcla((HOGAR, lambda: magento("El Emporio del Hogar", "https://www.elemporiodelhogar.com.uy"))),
     "El Clon": mezcla((HOGAR, lambda: fenicio("El Clon", "https://www.elclon.com.uy", ["hogar", "tiempo-libre"]))),
-    "Divino": mezcla((HOGAR, lambda: fenicio("Divino", "https://www.divino.com.uy", [
-        "living", "comedor", "colchones-y-sommiers", "exteriores", "oficina", "organizacion-del-hogar", "zona-outlet",
-    ]))),
-    "JYSK": mezcla((HOGAR, lambda: fenicio("JYSK", "https://www.jysk.uy", [
-        "almacenaje", "bano", "comedor", "cortinas", "dormitorio", "hogar-y-decoracion", "jardin", "living", "oficina",
-    ]))),
+    "Divino": mezcla(
+        (JARDIN, lambda: fenicio("Divino", "https://www.divino.com.uy", ["exteriores"])),
+        (HOGAR, lambda: fenicio("Divino", "https://www.divino.com.uy", [
+            "living", "comedor", "colchones-y-sommiers", "oficina", "organizacion-del-hogar", "zona-outlet",
+        ])),
+    ),
+    "JYSK": mezcla(
+        (JARDIN, lambda: fenicio("JYSK", "https://www.jysk.uy", ["jardin"])),
+        (HOGAR, lambda: fenicio("JYSK", "https://www.jysk.uy", [
+            "almacenaje", "bano", "comedor", "cortinas", "dormitorio", "hogar-y-decoracion", "living", "oficina",
+        ])),
+    ),
     "La Tentación": mezcla(
         (HOGAR, lambda: fenicio("La Tentación", "https://www.latentacion.com.uy", ["hogar"])),
         (FERRETERIA, lambda: fenicio("La Tentación", "https://www.latentacion.com.uy", ["construccion"])),
     ),
-    "Brillante": mezcla((HOGAR, lambda: fenicio("Brillante", "https://www.brillante.com.uy", [
-        "muebles", "bazar", "aire-libre", "colchones-y-sommiers", "calefaccion",
-    ]))),
-    "Rústico Hogar": mezcla((HOGAR, lambda: fenicio("Rústico Hogar", "https://rusticohogar.com.uy", [
-        "living", "comedor", "dormitorio", "oficina", "cocina", "bazar-y-deco", "colchones-y-sommiers",
-        "jardin-exterior", "textiles-del-hogar", "iluminacion", "decoracion", "sale",
-    ]))),
+    "Rústico Hogar": mezcla(
+        (JARDIN, lambda: fenicio("Rústico Hogar", "https://rusticohogar.com.uy", ["jardin-exterior"])),
+        (HOGAR, lambda: fenicio("Rústico Hogar", "https://rusticohogar.com.uy", [
+            "living", "comedor", "dormitorio", "oficina", "cocina", "bazar-y-deco", "colchones-y-sommiers",
+            "textiles-del-hogar", "iluminacion", "decoracion", "sale",
+        ])),
+    ),
     "Balton": mezcla((HOGAR, lambda: shopify("Balton", "https://balton.com.uy"))),
     "MundoShop": mezcla((HOGAR, lambda: shopify("MundoShop", "https://mundoshop.com.uy"))),
     "Arredo": mezcla((HOGAR, lambda: vtex("Arredo", "https://www.arredo.com.uy"))),
