@@ -36,6 +36,10 @@ def main() -> int:
             continue
         resumen[nombre] = f"{len(prods)} productos en {time.time() - t0:.0f}s"
         muestras[nombre] = [p.__dict__ for p in prods[:15]]
+        por_rubro = {}
+        for p in prods:
+            por_rubro[p.extra.get("rubro", "?")] = por_rubro.get(p.extra.get("rubro", "?"), 0) + 1
+        resumen[nombre] += " (" + ", ".join(f"{k}: {v}" for k, v in por_rubro.items()) + ")"
         for p in prods:
             motivo = hist.evaluar(p)
             # Una tienda sin historial todavía (recién agregada) solo aprende, no avisa.
@@ -52,7 +56,7 @@ def main() -> int:
 
     if prueba:
         lineas = "\n".join(f"• {k}: {v}" for k, v in resumen.items())
-        ok = telegram.enviar(f"✅ <b>Cazador de ofertas conectado</b>\nRevisión de prueba:\n{lineas}")
+        ok = telegram.enviar(f"✅ <b>Cazador Hogar: revisión de prueba</b>\nRevisión de prueba:\n{lineas}")
         rep = pathlib.Path("reporte")
         rep.mkdir(exist_ok=True)
         (rep / "resumen.json").write_text(

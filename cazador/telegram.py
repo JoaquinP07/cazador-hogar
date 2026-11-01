@@ -36,8 +36,10 @@ def enviar(texto: str) -> bool:
 
 
 def aviso(p: Producto, motivo: str) -> str:
+    r = p.extra.get("rubro", "")
+    icono = {"Ferretería": "🔧", "Hogar": "🏠"}.get(r, "🚨")
     return (
-        f"🚨 <b>Posible error de precio</b> — {html.escape(p.tienda)}\n"
+        f"{icono} <b>{html.escape(r or 'Oferta')}</b> · Posible error de precio — {html.escape(p.tienda)}\n"
         f"{html.escape(p.nombre)}\n"
         f"<b>{fmt(p.precio, p.moneda)}</b> · {html.escape(motivo)}\n"
         f'<a href="{html.escape(p.url, quote=True)}">Ver producto</a>'

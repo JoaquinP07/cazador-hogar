@@ -55,7 +55,7 @@ def moneda(sim: str) -> str:
 
 
 # ---------------------------------------------------------------- Fenicio
-# (ZonaTecno, AMV Store, Tienda Soy Santander)
+# (Arocena, El Clon, Divino, JYSK, La Tentación, Brillante, Rústico Hogar)
 _IT = re.compile(r"<div class='it [^']*' data-disp='(\d)' data-codProd='([^']+)' data-codVar='([^']+)'")
 
 
@@ -116,7 +116,7 @@ def fenicio(tienda: str, base: str, categorias: Iterable[str], max_paginas: int 
     return list(vistos.values())
 
 
-# ---------------------------------------------------------------- Shopify (Cover Company)
+# ---------------------------------------------------------------- Shopify (Balton, MundoShop)
 def shopify(tienda: str, base: str, moneda_tienda: str = "UYU") -> list[Producto]:
     prods = []
     for pag in range(1, 60):
@@ -146,7 +146,7 @@ def shopify(tienda: str, base: str, moneda_tienda: str = "UYU") -> list[Producto
     return prods
 
 
-# ---------------------------------------------------------------- VTEX FastStore (Tata / Multiahorro Hogar)
+# ---------------------------------------------------------------- VTEX FastStore (Tata / Multiahorro)
 _FS_QUERY = "https://www.tata.com.uy/api/graphql"
 
 
@@ -196,23 +196,60 @@ def faststore(tienda: str, base: str, categorias: Iterable[str]) -> list[Product
     return list(vistos.values())
 
 
-# ---------------------------------------------------------------- Devoto (Blazor; solo primera página de cada categoría)
-_DEV_ITEM = re.compile(
-    r'href="(?:https://www\.devoto\.com\.uy)?/?(product/[a-z0-9-]+/(\d+))"[^>]*>.*?alt="([^"]+)".*?'
-    r'(U\$S|\$)\s*</span>\s*<span[^>]*>\s*([\d.,]+)',
-    re.S,
-)
+# ---------------------------------------------------------------- VTEX clásico (Arredo)
+def vtex(tienda: str, base: str, maximo: int = 2500) -> list[Producto]:
+    vistos: dict[str, Producto] = {}
+    desde, total = 0, None
+    while desde < maximo:
+        r = _get(f"{base}/api/catalog_system/pub/products/search", params={"_from": desde, "_to": desde + 49})
+        if r.status_code not in (200, 206):
+            nota(f"  [{tienda}] desde {desde}: HTTP {r.status_code}")
+            break
+        if total is None:
+            m = re.search(r"/(\d+)$", r.headers.get("resources", ""))
+            total = int(m.group(1)) if m else maximo
+        lote = r.json()
+        if not lote:
+            break
+        for pr in lote:
+            for it in pr.get("items", [])[:20]:
+                of = ((it.get("sellers") or [{}])[0]).get("commertialOffer") or {}
+                if not of.get("Price"):
+                    continue
+                lista = of.get("ListPrice") or of.get("PriceWithoutDiscount")
+                p = Producto(
+                    tienda=tienda,
+                    id=str(it["itemId"]),
+                    nombre=it.get("nameComplete") or pr["productName"],
+                    precio=float(of["Price"]),
+                    moneda="UYU",
+                    url=pr.get("link") or f"{base}/{pr['linkText']}/p",
+                    precio_lista=float(lista) if lista and lista > of["Price"] else None,
+                    disponible=(of.get("AvailableQuantity") or 0) > 0,
+                )
+                vistos[p.clave] = p
+        desde += 50
+        if desde >= total:
+            break
+    nota(f"  [{tienda}] {total} declarados")
+    return list(vistos.values())
 
 
-def devoto(tienda: str, categorias: Iterable[str]) -> list[Producto]:
+# ---------------------------------------------------------------- Disco / Geant (Blazor; solo primera página de cada categoría)
+def gdu(tienda: str, dominio: str, categorias: Iterable[str]) -> list[Producto]:
+    item = re.compile(
+        r'href="(?:https://www\.' + re.escape(dominio) + r')?/?(product/[a-z0-9-]+/(\d+))"[^>]*>.*?alt="([^"]+)".*?'
+        r'(U\$S|\$)\s*</span>\s*<span[^>]*>\s*([\d.,]+)',
+        re.S,
+    )
     vistos: dict[str, Producto] = {}
     for cat in categorias:
-        r = _get(f"https://www.devoto.com.uy/products/category/{cat}")
+        r = _get(f"https://www.{dominio}/products/category/{cat}")
         if r.status_code != 200:
             nota(f"  [{tienda}] {cat}: HTTP {r.status_code}")
             continue
         n = 0
-        for m in _DEV_ITEM.finditer(r.text):
+        for m in item.finditer(r.text):
             ruta, pid, nombre, sim, monto = m.groups()
             p = Producto(
                 tienda=tienda,
@@ -220,7 +257,7 @@ def devoto(tienda: str, categorias: Iterable[str]) -> list[Producto]:
                 nombre=html.unescape(nombre),
                 precio=numero(monto),
                 moneda=moneda(sim),
-                url=f"https://www.devoto.com.uy/{ruta}",
+                url=f"https://www.{dominio}/{ruta}",
             )
             vistos.setdefault(p.clave, p)
             n += 1
@@ -228,105 +265,127 @@ def devoto(tienda: str, categorias: Iterable[str]) -> list[Producto]:
     return list(vistos.values())
 
 
-# ---------------------------------------------------------------- Loi (feed público oficial, límite 100 pedidos/min)
-# El filtro por categoría del feed no funciona, así que se trae todo y se descartan rubros ajenos.
-_LOI_EXCLUIR = re.compile(
-    r"perfum|fragan|maquill|belleza|cosm[eé]t|crema|cabello|piel|u[ñn]as|ropa|moda|calzado|"
-    r"zapat|cartera|bolso|mochila|bijou|joya|beb[eé]|juguet|lencer|pijama|remera|buzo|campera",
-    re.I,
-)
+# ---------------------------------------------------------------- Sodimac (plataforma Falabella; datos en __NEXT_DATA__)
+_SOD = "https://www.sodimac.com.uy/sodimac-uy"
 
 
-def loi(tienda: str) -> list[Producto]:
-    prods: list[Producto] = []
-    pag, paginas, descartados = 1, 1, 0
-    while pag <= paginas and pag <= 80:
-        r = _get(f"https://loi.com.uy/api/v1/products.json?per_page=100&page={pag}")
-        if r.status_code != 200:
-            nota(f"  [{tienda}] pág {pag}: HTTP {r.status_code}")
-            break
-        d = r.json()
-        paginas = d.get("total_pages") or 0
-        for p in d.get("products", []):
-            cats = " ".join(c.get("name", "") + " " + c.get("slug", "") for c in p.get("category_hierarchy") or [])
-            if _LOI_EXCLUIR.search(cats):
-                descartados += 1
-                continue
-            precio = p.get("price") or {}
-            prods.append(
-                Producto(
-                    tienda=tienda,
-                    id=str(p["id"]),
-                    nombre=p["title"],
-                    precio=float(precio.get("amount") or 0),
-                    moneda="USD" if precio.get("currency") == "USD" else "UYU",
-                    url=p["url"],
-                    precio_lista=float(precio["original_amount"]) if precio.get("original_amount") else None,
-                    disponible=p.get("availability") == "in_stock",
+def sodimac(tienda: str, categorias: Iterable[str], max_paginas: int = 60) -> list[Producto]:
+    vistos: dict[str, Producto] = {}
+    for cat in categorias:
+        total = None
+        for pag in range(1, max_paginas + 1):
+            r = _get(f"{_SOD}/category/{cat}/x?currentpage={pag}")
+            m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', r.text, re.S)
+            if r.status_code != 200 or not m:
+                nota(f"  [{tienda}] {cat} pág {pag}: HTTP {r.status_code} {'sin datos' if not m else ''}")
+                break
+            sd = json.loads(m.group(1))["props"]["pageProps"]["searchProps"]["searchData"]
+            pg = sd.get("pagination") or {}
+            total = pg.get("count", 0)
+            if pg.get("currentPage") != pag:
+                break
+            for x in sd.get("results") or []:
+                precios = {pr.get("type"): pr for pr in x.get("prices") or []}
+                actual = min(
+                    (pr for pr in x.get("prices") or [] if pr.get("priceWithoutFormatting")),
+                    key=lambda pr: pr["priceWithoutFormatting"],
+                    default=None,
                 )
-            )
-        pag += 1
-        time.sleep(0.7)  # respeta el límite de 100 pedidos por minuto
-    nota(f"  [{tienda}] {len(prods)} leídos, {descartados} de otros rubros descartados")
+                if not actual:
+                    continue
+                normal = precios.get("NORMAL")
+                lista = normal["priceWithoutFormatting"] if normal else None
+                p = Producto(
+                    tienda=tienda,
+                    id=str(x.get("skuId") or x["productId"]),
+                    nombre=" ".join(filter(None, [x.get("brand"), x.get("displayName")])),
+                    precio=float(actual["priceWithoutFormatting"]),
+                    moneda=moneda(actual.get("symbol") or "$"),
+                    url=x.get("url") or f"{_SOD}/product/{x['productId']}/x/{x.get('skuId') or x['productId']}",
+                    precio_lista=float(lista) if lista and lista > actual["priceWithoutFormatting"] else None,
+                )
+                vistos[p.clave] = p
+            if pag * (pg.get("perPage") or 40) >= total:
+                break
+            time.sleep(0.5)
+        nota(f"  [{tienda}] {cat}: {total} declarados")
+    return list(vistos.values())
+
+
+# ---------------------------------------------------------------- Rubros
+FERRETERIA, HOGAR = "Ferretería", "Hogar"
+
+
+def rubro(nombre: str, prods: list[Producto]) -> list[Producto]:
+    for p in prods:
+        p.extra["rubro"] = nombre
     return prods
+
+
+def mezcla(*partes: tuple[str, Callable[[], list[Producto]]]) -> Callable[[], list[Producto]]:
+    """Une varias lecturas de una misma tienda, cada una con su rubro."""
+    def leer() -> list[Producto]:
+        vistos: dict[str, Producto] = {}
+        for r, f in partes:
+            for p in rubro(r, f()):
+                vistos.setdefault(p.clave, p)
+        return list(vistos.values())
+    return leer
 
 
 # ---------------------------------------------------------------- Configuración
 TIENDAS: dict[str, Callable[[], list[Producto]]] = {
-    "Loi": lambda: loi("Loi"),
-    "ZonaTecno": lambda: fenicio(
-        "ZonaTecno",
-        "https://www.zonatecno.com.uy",
-        [
-            "audio-foto-y-video",
-            "celulares-relojes-y-tablets",
-            "consolas-y-accesorios",
-            "informatica",
-            "notebooks-y-pc",
-            "movilidad-electrica",
-            "zona-home",
-        ],
+    "Sodimac": mezcla(
+        (FERRETERIA, lambda: sodimac("Sodimac", ["cat20862"])),  # Herramientas y maquinarias
+        (HOGAR, lambda: sodimac("Sodimac", [
+            "cat20002",  # Muebles
+            "cat20058",  # Colchones y sommiers
+            "cat20104",  # Decoración
+            "cat20228",  # Bazar
+            "cat20204",  # Iluminación interior
+            "cat20288",  # Piscinas
+        ])),
     ),
-    "AMV Store": lambda: fenicio(
-        "AMV Store",
-        "https://amvstore.com.uy",
-        [
-            "celulares-y-tecnologia",
-            "electrodomesticos",
-            "informatica",
-            "notebooks-y-accesorios",
-            "tv-audio-y-video",
-        ],
+    "Ferretería Arocena": mezcla((FERRETERIA, lambda: fenicio("Ferretería Arocena", "https://ferreteriaarocena.com.uy", [
+        "herramientas", "ferreteria-y-fijaciones", "electricidad-e-iluminacion", "jardin-y-riego",
+        "parrillas-y-aire-libre", "piscinas", "sanitaria-y-griferias", "calefaccion-y-climatizacion",
+        "pinturas-y-accesorios", "construccion-y-obra",
+    ]))),
+    "El Clon": mezcla((HOGAR, lambda: fenicio("El Clon", "https://www.elclon.com.uy", ["hogar", "tiempo-libre"]))),
+    "Divino": mezcla((HOGAR, lambda: fenicio("Divino", "https://www.divino.com.uy", [
+        "living", "comedor", "dormitorios", "colchones-y-sommiers", "bazar-y-decoracion", "exteriores",
+        "iluminacion", "oficina", "textiles", "organizacion-del-hogar", "cocinas", "banos", "kids", "zona-outlet",
+    ]))),
+    "JYSK": mezcla((HOGAR, lambda: fenicio("JYSK", "https://www.jysk.uy", [
+        "almacenaje", "bano", "comedor", "cortinas", "dormitorio", "hogar-y-decoracion", "jardin", "living", "oficina",
+    ]))),
+    "La Tentación": mezcla(
+        (HOGAR, lambda: fenicio("La Tentación", "https://www.latentacion.com.uy", ["hogar"])),
+        (FERRETERIA, lambda: fenicio("La Tentación", "https://www.latentacion.com.uy", ["construccion"])),
     ),
-    "Soy Santander": lambda: fenicio(
-        "Soy Santander",
-        "https://tienda.soysantander.com.uy",
-        [
-            "electrodomesticos",
-            "gaming",
-            "informatica",
-            "tecnologia",
-            "televisores-audio-y-video",
-        ],
+    "Brillante": mezcla(
+        (HOGAR, lambda: fenicio("Brillante", "https://www.brillante.com.uy", [
+            "muebles", "bazar", "aire-libre", "colchones-y-sommiers", "calefaccion",
+        ])),
+        (FERRETERIA, lambda: fenicio("Brillante", "https://www.brillante.com.uy", ["herramientas"])),
     ),
-    "Cover Company": lambda: shopify("Cover Company", "https://www.covercompany.com.uy"),
-    "Multiahorro / Tata": lambda: faststore(
-        "Multiahorro / Tata",
-        "https://www.tata.com.uy",
-        [
-            "electrodomesticos-y-aires-ac-",
-            "pequenos-electrodomesticos",
-            "climatizacion",
-            "smart-tv-y-audio",
-            "electronica-audio-y-video",
-            "tecnologia",
-            "computacion",
-            "celulares-y-telefonia",
-            "consolas-y-videojuegos",
-        ],
+    "Rústico Hogar": mezcla((HOGAR, lambda: fenicio("Rústico Hogar", "https://rusticohogar.com.uy", [
+        "living", "comedor", "dormitorio", "oficina", "cocina", "bazar-y-deco", "colchones-y-sommiers",
+        "jardin-exterior", "textiles-del-hogar", "iluminacion", "decoracion", "sale",
+    ]))),
+    "Balton": mezcla((HOGAR, lambda: shopify("Balton", "https://balton.com.uy"))),
+    "MundoShop": mezcla((HOGAR, lambda: shopify("MundoShop", "https://mundoshop.com.uy"))),
+    "Arredo": mezcla((HOGAR, lambda: vtex("Arredo", "https://www.arredo.com.uy"))),
+    "Multiahorro / Tata": mezcla(
+        (FERRETERIA, lambda: faststore("Multiahorro / Tata", "https://www.tata.com.uy", ["ferreteria"])),
+        (HOGAR, lambda: faststore("Multiahorro / Tata", "https://www.tata.com.uy", ["hogar-y-bazar", "textil"])),
     ),
-    "Devoto": lambda: devoto(
-        "Devoto",
-        ["tv-y-audio/20", "celulares-y-telefonia/21", "electrodomesticos/22", "tecnologia/23"],
+    "Disco": mezcla(
+        (FERRETERIA, lambda: gdu("Disco", "disco.com.uy", ["ferreteria-y-automovil/40"])),
+        (HOGAR, lambda: gdu("Disco", "disco.com.uy", ["hogar/31", "muebles/30", "decoracion/32", "textil-hogar/33"])),
+    ),
+    "Geant": mezcla(
+        (FERRETERIA, lambda: gdu("Geant", "geant.com.uy", ["ferreteria-y-automovil/40"])),
+        (HOGAR, lambda: gdu("Geant", "geant.com.uy", ["hogar/31", "muebles/30", "decoracion/32", "textil-hogar/33"])),
     ),
 }
