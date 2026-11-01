@@ -1,0 +1,2957 @@
+{
+ "Sodimac": [
+  {
+   "tienda": "Sodimac",
+   "id": "2646994",
+   "nombre": "Bauker Cortadora de pasto eléctrica 1600 W YT5147H",
+   "precio": 199.0,
+   "moneda": "USD",
+   "url": "https://www.sodimac.com.uy/sodimac-uy/product/2646994/x/2646994",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Sodimac",
+   "id": "1943928",
+   "nombre": "Tramontina Bordeadora eléctrica 1000 W 79634103",
+   "precio": 55.0,
+   "moneda": "USD",
+   "url": "https://www.sodimac.com.uy/sodimac-uy/product/1943928/x/1943928",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Sodimac",
+   "id": "9070400",
+   "nombre": "Bauker Bordeadora inalámbrica 20 V",
+   "precio": 72.0,
+   "moneda": "USD",
+   "url": "https://www.sodimac.com.uy/sodimac-uy/product/9070400/x/9070400",
+   "precio_lista": 89.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Sodimac",
+   "id": "2633388",
+   "nombre": "Husqvarna Motosierra H125 18\"",
+   "precio": 259.0,
+   "moneda": "USD",
+   "url": "https://www.sodimac.com.uy/sodimac-uy/product/2633388/x/2633388",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Sodimac",
+   "id": "2646978",
+   "nombre": "Karson Cortadora de pasto eléctrica 1000 W YT5139H",
+   "precio": 93.0,
+   "moneda": "USD",
+   "url": "https://www.sodimac.com.uy/sodimac-uy/product/2646978/x/2646978",
+   "precio_lista": 109.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Sodimac",
+   "id": "3299694",
+   "nombre": "Hessen Desmalezadora a combustión 43 cc",
+   "precio": 89.0,
+   "moneda": "USD",
+   "url": "https://www.sodimac.com.uy/sodimac-uy/product/3299694/x/3299694",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Sodimac",
+   "id": "1894218",
+   "nombre": "Bauker Bordeadora eléctrica 350 W",
+   "precio": 45.0,
+   "moneda": "USD",
+   "url": "https://www.sodimac.com.uy/sodimac-uy/product/1894218/x/1894218",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Sodimac",
+   "id": "2481693",
+   "nombre": "Stihl Aceite 2 tiempos 1 L",
+   "precio": 19.0,
+   "moneda": "USD",
+   "url": "https://www.sodimac.com.uy/sodimac-uy/product/2481693/x/2481693",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Sodimac",
+   "id": "1764756",
+   "nombre": "Scepter Bidón combustible 5 lt",
+   "precio": 899.0,
+   "moneda": "UYU",
+   "url": "https://www.sodimac.com.uy/sodimac-uy/product/1764756/x/1764756",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Sodimac",
+   "id": "1952269",
+   "nombre": "Stihl Bordeadora FS38 27,2 cc",
+   "precio": 235.0,
+   "moneda": "USD",
+   "url": "https://www.sodimac.com.uy/sodimac-uy/product/1952269/x/1952269",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Sodimac",
+   "id": "3438333",
+   "nombre": "Forest & Garden Desmalezadora a gasolina 52 cc 4 en 1 DESG852/14-1",
+   "precio": 249.0,
+   "moneda": "USD",
+   "url": "https://www.sodimac.com.uy/sodimac-uy/product/3438333/x/3438333",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Sodimac",
+   "id": "9066608",
+   "nombre": "Karson Cortadora de pasto a combustión manual 1.5 kW 99 cc A510MI-1",
+   "precio": 299.0,
+   "moneda": "USD",
+   "url": "https://www.sodimac.com.uy/sodimac-uy/product/9066608/x/9066608",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Sodimac",
+   "id": "2273594",
+   "nombre": "Tramontina Bordeadora eléctrica 1500 W 79634153",
+   "precio": 2449.0,
+   "moneda": "UYU",
+   "url": "https://www.sodimac.com.uy/sodimac-uy/product/2273594/x/2273594",
+   "precio_lista": 2899.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Sodimac",
+   "id": "2646986",
+   "nombre": "Bauker Cortadora de pasto eléctrica 34 cm 1400 W YT5140H",
+   "precio": 169.0,
+   "moneda": "USD",
+   "url": "https://www.sodimac.com.uy/sodimac-uy/product/2646986/x/2646986",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Sodimac",
+   "id": "9070397",
+   "nombre": "Bauker Cortacerco inalámbrico 20 V",
+   "precio": 89.0,
+   "moneda": "USD",
+   "url": "https://www.sodimac.com.uy/sodimac-uy/product/9070397/x/9070397",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  }
+ ],
+ "Ferretería Arocena": [
+  {
+   "tienda": "Ferretería Arocena",
+   "id": "TSSLI20308-TSSLI20308",
+   "nombre": "Tijera de Poda 20V sin Batería ni Cargador Total",
+   "precio": 142.13,
+   "moneda": "USD",
+   "url": "https://ferreteriaarocena.com.uy/catalogo/tijera-de-poda-20v-sin-bateria-ni-cargador-total_TSSLI20308_TSSLI20308",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Ferretería Arocena",
+   "id": "H001-H001",
+   "nombre": "Aspersor Pop Up Turbina PGP ADJ 6m a 15m Hunter",
+   "precio": 17.66,
+   "moneda": "USD",
+   "url": "https://ferreteriaarocena.com.uy/catalogo/aspersor-pop-up-turbina-pgp-adj-6m-a-15m-hunter_H001_H001",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Ferretería Arocena",
+   "id": "H003-H003",
+   "nombre": "Aspersor Pop Up Turbina PGP Ultra 5m a 14m Hunter",
+   "precio": 19.4,
+   "moneda": "USD",
+   "url": "https://ferreteriaarocena.com.uy/catalogo/aspersor-pop-up-turbina-pgp-ultra-5m-a-14m-hunter_H003_H003",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Ferretería Arocena",
+   "id": "H004-H004",
+   "nombre": "Aspersor Pop Up Turbina PGJ 4m a 11m Hunter",
+   "precio": 17.57,
+   "moneda": "USD",
+   "url": "https://ferreteriaarocena.com.uy/catalogo/aspersor-pop-up-turbina-pgj-4m-a-11m-hunter_H004_H004",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Ferretería Arocena",
+   "id": "PSU5-H031",
+   "nombre": "Aspersor PS Ultra 5cm - 3m Rojo",
+   "precio": 5.07,
+   "moneda": "USD",
+   "url": "https://ferreteriaarocena.com.uy/catalogo/aspersor-ps-ultra-5cm-3m-rojo_PSU5_H031",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Ferretería Arocena",
+   "id": "MPROTATOR-H126",
+   "nombre": "Aspersor MP Rotator Hunter - MP100090 / 90° - 210° / 2.5m - 4.5m",
+   "precio": 15.39,
+   "moneda": "USD",
+   "url": "https://ferreteriaarocena.com.uy/catalogo/aspersor-mp-rotator-hunter-mp100090-90-210-2-5m-4-5m_MPROTATOR_H126",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Ferretería Arocena",
+   "id": "PSU10-H025",
+   "nombre": "Aspersor PS Ultra 10cm - 3m Rojo",
+   "precio": 5.07,
+   "moneda": "USD",
+   "url": "https://ferreteriaarocena.com.uy/catalogo/aspersor-ps-ultra-10cm-3m-rojo_PSU10_H025",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Ferretería Arocena",
+   "id": "4770-H043",
+   "nombre": "Boquilla para aspersor PS Ultra - 4A 1.2m Verde",
+   "precio": 2.44,
+   "moneda": "USD",
+   "url": "https://ferreteriaarocena.com.uy/catalogo/boquilla-para-aspersor-ps-ultra-4a-1-2m-verde_4770_H043",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Ferretería Arocena",
+   "id": "izqlat-H052",
+   "nombre": "Boquilla para aspersor PS Ultra - Lateral 1.5x0.9",
+   "precio": 3.19,
+   "moneda": "USD",
+   "url": "https://ferreteriaarocena.com.uy/catalogo/boquilla-para-aspersor-ps-ultra-lateral-1-5x0-9_izqlat_H052",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Ferretería Arocena",
+   "id": "HO57HO56-H056",
+   "nombre": "Boquilla para aspersor innundadora - PCN50 Verde 110L/h",
+   "precio": 6.19,
+   "moneda": "USD",
+   "url": "https://ferreteriaarocena.com.uy/catalogo/boquilla-para-aspersor-innundadora-pcn50-verde-110l-h_HO57HO56_H056",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Ferretería Arocena",
+   "id": "H062-H062",
+   "nombre": "Programador de Riego 4 Estaciones Hunter",
+   "precio": 108.06,
+   "moneda": "USD",
+   "url": "https://ferreteriaarocena.com.uy/catalogo/programador-de-riego-4-estaciones-hunter_H062_H062",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Ferretería Arocena",
+   "id": "H063-H063",
+   "nombre": "Programador de Riego 6 Estaciones Hunter",
+   "precio": 124.61,
+   "moneda": "USD",
+   "url": "https://ferreteriaarocena.com.uy/catalogo/programador-de-riego-6-estaciones-hunter_H063_H063",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Ferretería Arocena",
+   "id": "H096-H096",
+   "nombre": "Electroválvula 1\" + Solenoide Hunter",
+   "precio": 28.57,
+   "moneda": "USD",
+   "url": "https://ferreteriaarocena.com.uy/catalogo/electrovalvula-1-solenoide-hunter_H096_H096",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Ferretería Arocena",
+   "id": "H105-H105",
+   "nombre": "Membrana para Electroválvula Hunter",
+   "precio": 18.3,
+   "moneda": "USD",
+   "url": "https://ferreteriaarocena.com.uy/catalogo/membrana-para-electrovalvula-hunter_H105_H105",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Ferretería Arocena",
+   "id": "H108-H108",
+   "nombre": "Solenoide para Electroválvula Hunter",
+   "precio": 19.87,
+   "moneda": "USD",
+   "url": "https://ferreteriaarocena.com.uy/catalogo/solenoide-para-electrovalvula-hunter_H108_H108",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  }
+ ],
+ "El Dorado": [
+  {
+   "tienda": "El Dorado",
+   "id": "45695",
+   "nombre": "Pilas Grenno Alcalina Aax1",
+   "precio": 15.0,
+   "moneda": "UYU",
+   "url": "https://www.eldorado.com.uy/pilas-grenno-alcalina-aax1/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "El Dorado",
+   "id": "53637",
+   "nombre": "Lampara Philips Ecohome Led 10.5w Fría",
+   "precio": 119.0,
+   "moneda": "UYU",
+   "url": "https://www.eldorado.com.uy/lampara-philips-ecohome-led-10-5w-fria/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "El Dorado",
+   "id": "50613",
+   "nombre": "Lampara Eveready E303958400 Led 8w Calida",
+   "precio": 79.0,
+   "moneda": "UYU",
+   "url": "https://www.eldorado.com.uy/lampara-eveready-e303958400-led-8w-calida/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "El Dorado",
+   "id": "45906",
+   "nombre": "Pilas Grenno Alcalina Aaax1",
+   "precio": 15.0,
+   "moneda": "UYU",
+   "url": "https://www.eldorado.com.uy/pilas-grenno-alcalina-aaax1/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "El Dorado",
+   "id": "45692",
+   "nombre": "Pilas Grenno Alcalina Aaax4",
+   "precio": 169.0,
+   "moneda": "UYU",
+   "url": "https://www.eldorado.com.uy/pilas-grenno-alcalina-aaax4/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "El Dorado",
+   "id": "9120",
+   "nombre": "Pilas Duracell Aaa 2Un",
+   "precio": 220.0,
+   "moneda": "UYU",
+   "url": "https://www.eldorado.com.uy/pilas-duracell-aaa-2un/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "El Dorado",
+   "id": "2922",
+   "nombre": "Adhesivo La Gotita 2Ml",
+   "precio": 152.0,
+   "moneda": "UYU",
+   "url": "https://www.eldorado.com.uy/adhesivo-la-gotita-2ml/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "El Dorado",
+   "id": "53636",
+   "nombre": "Lampara Philips Ecohome Led 10.5w Calida",
+   "precio": 119.0,
+   "moneda": "UYU",
+   "url": "https://www.eldorado.com.uy/lampara-philips-ecohome-led-10-5w-calida/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "El Dorado",
+   "id": "50702",
+   "nombre": "Lampara Eveready E303958800 Led 12w Calida",
+   "precio": 110.0,
+   "moneda": "UYU",
+   "url": "https://www.eldorado.com.uy/lampara-eveready-e303958800-led-12w-calida/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "El Dorado",
+   "id": "9595",
+   "nombre": "Pilas Duracell Aa 6Un",
+   "precio": 459.0,
+   "moneda": "UYU",
+   "url": "https://www.eldorado.com.uy/pilas-duracell-aa-6un/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "El Dorado",
+   "id": "6976",
+   "nombre": "Shampoo Florex P/Autos 500Cc",
+   "precio": 152.0,
+   "moneda": "UYU",
+   "url": "https://www.eldorado.com.uy/shampoo-florex-p-autos-500cc/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "El Dorado",
+   "id": "2212",
+   "nombre": "Pilas Duracell Aa 2Un",
+   "precio": 219.0,
+   "moneda": "UYU",
+   "url": "https://www.eldorado.com.uy/pilas-duracell-aa-2un/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "El Dorado",
+   "id": "60971",
+   "nombre": "Cortaserco Worksite Cht234m 21v Espada 20\"",
+   "precio": 3290.0,
+   "moneda": "UYU",
+   "url": "https://www.eldorado.com.uy/cortaserco-worksite-cht234m-21v-espada-20/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "El Dorado",
+   "id": "58135",
+   "nombre": "PISTOLA DE PINTAR WORKSITE CSG200M-G S/BAT 21V BATERÍA NO INCLUIDA",
+   "precio": 2680.0,
+   "moneda": "UYU",
+   "url": "https://www.eldorado.com.uy/pistola-de-pintar-worksite-csg200m-g-s-bat-21v-bateria-no-incluida/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "El Dorado",
+   "id": "58134",
+   "nombre": "BORDEADORA WORKSITE CGT234M-G S/BAT 21V BATERÍA NO INCLUIDA",
+   "precio": 2190.0,
+   "moneda": "UYU",
+   "url": "https://www.eldorado.com.uy/bordeadora-worksite-cgt234m-g-s-bat-21v-bateria-no-incluida/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  }
+ ],
+ "El Emporio del Hogar": [
+  {
+   "tienda": "El Emporio del Hogar",
+   "id": "280820",
+   "nombre": "HELADERA JAMES FRÍO SECO Frio seco Rj 301 inv inox d Inoxidable",
+   "precio": 670.0,
+   "moneda": "UYU",
+   "url": "https://www.elemporiodelhogar.com.uy/heladera-james-frio-seco-frio-seco-rj-301-inv-inox-d-inoxidable-280820",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Emporio del Hogar",
+   "id": "280823",
+   "nombre": "HELADERA JAMES FRÍO SECO 372 litros Rj 401 inv inox d Inoxidable",
+   "precio": 740.0,
+   "moneda": "UYU",
+   "url": "https://www.elemporiodelhogar.com.uy/heladera-james-frio-seco-372-litros-rj-401-inv-inox-d-inoxidable-280823",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Emporio del Hogar",
+   "id": "280824",
+   "nombre": "HELADERA JAMES 442 litros Rj 35m sbsi dark inox Inoxidable",
+   "precio": 970.0,
+   "moneda": "UYU",
+   "url": "https://www.elemporiodelhogar.com.uy/heladera-james-442-litros-rj-35m-sbsi-dark-inox-inoxidable-280824",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Emporio del Hogar",
+   "id": "280825",
+   "nombre": "FREEZER JAMES FRÍO HUMEDO 99 litros Fhj 100m inv Blanco",
+   "precio": 270.0,
+   "moneda": "UYU",
+   "url": "https://www.elemporiodelhogar.com.uy/freezer-james-frio-humedo-99-litros-fhj-100m-inv-blanco-280825",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Emporio del Hogar",
+   "id": "280826",
+   "nombre": "LAVARROPAS JAMES 9 kg Lr 9140 inv plus Blanco",
+   "precio": 590.0,
+   "moneda": "UYU",
+   "url": "https://www.elemporiodelhogar.com.uy/lavarropas-james-9-kg-lr-9140-inv-plus-blanco-280826",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Emporio del Hogar",
+   "id": "280830001",
+   "nombre": "Sofa cama Tela Gris Tivoli",
+   "precio": 42990.0,
+   "moneda": "UYU",
+   "url": "https://www.elemporiodelhogar.com.uy/sofa-cama-tivoli-280830?color=Gris",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Emporio del Hogar",
+   "id": "280834",
+   "nombre": "Set de oficina Madera Alice",
+   "precio": 18990.0,
+   "moneda": "UYU",
+   "url": "https://www.elemporiodelhogar.com.uy/set-de-oficina-madera-alice-280834",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Emporio del Hogar",
+   "id": "280836001",
+   "nombre": "Escritorio gerencial 1800x800x700 Madera y metal Gris Work Nat/gris",
+   "precio": 32990.0,
+   "moneda": "UYU",
+   "url": "https://www.elemporiodelhogar.com.uy/escritorio-gerencial-work-280836?color=Natural/gris",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Emporio del Hogar",
+   "id": "280842",
+   "nombre": "Armario Bajo WORK 4P",
+   "precio": 18990.0,
+   "moneda": "UYU",
+   "url": "https://www.elemporiodelhogar.com.uy/armario-bajo-work-4p-280842",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Emporio del Hogar",
+   "id": "280842001",
+   "nombre": "Armario bajo 1600x600x730 Madera Gris Work 4 puertas Nat/gris",
+   "precio": 18990.0,
+   "moneda": "UYU",
+   "url": "https://www.elemporiodelhogar.com.uy/armario-bajo-work-4p-280842?color=Natural/gris",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Emporio del Hogar",
+   "id": "280843",
+   "nombre": "Armario Alto WORK 2P",
+   "precio": 14433.0,
+   "moneda": "UYU",
+   "url": "https://www.elemporiodelhogar.com.uy/armario-alto-work-2p-280843",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Emporio del Hogar",
+   "id": "280843001",
+   "nombre": "Armario alto 800x500x1600 Madera Gris Work 2 puertas Nat/gris",
+   "precio": 14433.0,
+   "moneda": "UYU",
+   "url": "https://www.elemporiodelhogar.com.uy/armario-alto-work-2p-280843?color=Natural/gris",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Emporio del Hogar",
+   "id": "280844",
+   "nombre": "Biblioteca WORK 2P",
+   "precio": 15544.0,
+   "moneda": "UYU",
+   "url": "https://www.elemporiodelhogar.com.uy/biblioteca-work-2p-280844",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Emporio del Hogar",
+   "id": "280844001",
+   "nombre": "Biblioteca 800x500x1600 Madera Gris Work 2 puertas Nat/gris",
+   "precio": 15544.0,
+   "moneda": "UYU",
+   "url": "https://www.elemporiodelhogar.com.uy/biblioteca-work-2p-280844?color=Natural/gris",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Emporio del Hogar",
+   "id": "280873",
+   "nombre": "ASPIRADORA ROBOT 2 en 1 Roomba y013420 Negro",
+   "precio": 399.0,
+   "moneda": "UYU",
+   "url": "https://www.elemporiodelhogar.com.uy/aspiradora-robot-2-en-1-roomba-y013420-negro-280873",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  }
+ ],
+ "El Clon": [
+  {
+   "tienda": "El Clon",
+   "id": "815138-0",
+   "nombre": "Fuente de ceramica blanca con asas",
+   "precio": 249.0,
+   "moneda": "UYU",
+   "url": "https://www.elclon.com.uy/catalogo/fuente-de-ceramica-blanca-con-asas_815138_0",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Clon",
+   "id": "818383-0",
+   "nombre": "Promo Set de matcha + jarra de vidrio de regalo",
+   "precio": 990.0,
+   "moneda": "UYU",
+   "url": "https://www.elclon.com.uy/catalogo/promo-set-de-matcha-jarra-de-vidrio-de-regalo_818383_0",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Clon",
+   "id": "818385-0",
+   "nombre": "Promo juguera electrica Daewoo + jarra de vidrio 1 litro de regalo",
+   "precio": 2399.0,
+   "moneda": "UYU",
+   "url": "https://www.elclon.com.uy/catalogo/promo-juguera-electrica-daewoo-jarra-de-vidrio-1-litro-de-regalo_818385_0",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Clon",
+   "id": "36617-0",
+   "nombre": "ENCENDEDOR RONSON CLEARLITE BLACK",
+   "precio": 25.0,
+   "moneda": "UYU",
+   "url": "https://www.elclon.com.uy/catalogo/encendedor-ronson-clearlite-black_36617_0",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Clon",
+   "id": "36618-0",
+   "nombre": "ENCENDEDOR RONSON ELECTRICO JET FLAME HIGHT NEON",
+   "precio": 75.0,
+   "moneda": "UYU",
+   "url": "https://www.elclon.com.uy/catalogo/encendedor-ronson-electrico-jet-flame-hight-neon_36618_0",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Clon",
+   "id": "36619-0",
+   "nombre": "ENCENDEDOR RONSON PEQUE",
+   "precio": 105.0,
+   "moneda": "UYU",
+   "url": "https://www.elclon.com.uy/catalogo/encendedor-ronson-peque_36619_0",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Clon",
+   "id": "36620-0",
+   "nombre": "ENCENDEDOR RONSON FLEXIBLE + GAS",
+   "precio": 219.0,
+   "moneda": "UYU",
+   "url": "https://www.elclon.com.uy/catalogo/encendedor-ronson-flexible-gas_36620_0",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Clon",
+   "id": "36621-0",
+   "nombre": "ENCENDEDOR RONSON FLAMEADOR ELECTRICO TORCH",
+   "precio": 219.0,
+   "moneda": "UYU",
+   "url": "https://www.elclon.com.uy/catalogo/encendedor-ronson-flameador-electrico-torch_36621_0",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Clon",
+   "id": "801503-0",
+   "nombre": "SET AROMATERAPIA",
+   "precio": 499.0,
+   "moneda": "UYU",
+   "url": "https://www.elclon.com.uy/catalogo/set-aromaterapia_801503_0",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Clon",
+   "id": "815568-0",
+   "nombre": "Porta certificado A4",
+   "precio": 139.0,
+   "moneda": "UYU",
+   "url": "https://www.elclon.com.uy/catalogo/porta-certificado-a4_815568_0",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Clon",
+   "id": "818036-0",
+   "nombre": "Aromatizador difusor ambiental frasco de vidrio 500ml",
+   "precio": 990.0,
+   "moneda": "UYU",
+   "url": "https://www.elclon.com.uy/catalogo/aromatizador-difusor-ambiental-frasco-de-vidrio-500ml_818036_0",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Clon",
+   "id": "818037-0",
+   "nombre": "Aromatizador 500ml con spray USB",
+   "precio": 1199.0,
+   "moneda": "UYU",
+   "url": "https://www.elclon.com.uy/catalogo/aromatizador-500ml-con-spray-usb_818037_0",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Clon",
+   "id": "818038-0",
+   "nombre": "Aromatizador difusor en frasco de vidrio 160ml",
+   "precio": 219.0,
+   "moneda": "UYU",
+   "url": "https://www.elclon.com.uy/catalogo/aromatizador-difusor-en-frasco-de-vidrio-160ml_818038_0",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Clon",
+   "id": "818044-0",
+   "nombre": "Asadera metalica calada antiadherente negra para pizza 33cm",
+   "precio": 169.0,
+   "moneda": "UYU",
+   "url": "https://www.elclon.com.uy/catalogo/asadera-metalica-calada-antiadherente-negra-para-pizza-33cm_818044_0",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "El Clon",
+   "id": "818045-0",
+   "nombre": "Asadera rectangular con molde para cupcakes 12 divisiones",
+   "precio": 249.0,
+   "moneda": "UYU",
+   "url": "https://www.elclon.com.uy/catalogo/asadera-rectangular-con-molde-para-cupcakes-12-divisiones_818045_0",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  }
+ ],
+ "Divino": [
+  {
+   "tienda": "Divino",
+   "id": "230251-001",
+   "nombre": "ALMOHADÓN EXTERIOR - POLIESTER AZUL SOLEIL",
+   "precio": 2990.0,
+   "moneda": "UYU",
+   "url": "https://www.divino.com.uy/catalogo/almohadon-exterior-poliester-azul-soleil_230251_001",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Divino",
+   "id": "252943-001",
+   "nombre": "BASE DE SOMBRILLA - POLIETILENO NEGRO 60429",
+   "precio": 3290.0,
+   "moneda": "UYU",
+   "url": "https://www.divino.com.uy/catalogo/base-de-sombrilla-polietileno-negro-60429_252943_001",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Divino",
+   "id": "233168-001",
+   "nombre": "CARRO BAR - MADERA NATURAL-BEIGE YANGON",
+   "precio": 7990.0,
+   "moneda": "UYU",
+   "url": "https://www.divino.com.uy/catalogo/carro-bar-madera-natural-beige-yangon_233168_001",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Divino",
+   "id": "258843-001",
+   "nombre": "SET LIVING EXTERIOR - POLIPROPILENO MARRON TURIM",
+   "precio": 16990.0,
+   "moneda": "UYU",
+   "url": "https://www.divino.com.uy/catalogo/set-living-exterior-polipropileno-marron-turim_258843_001",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Divino",
+   "id": "233245-001",
+   "nombre": "BANCO PLEGABLE - POLIETILENO-Y-METAL BLANCO BAGAN",
+   "precio": 2990.0,
+   "moneda": "UYU",
+   "url": "https://www.divino.com.uy/catalogo/banco-plegable-polietileno-y-metal-blanco-bagan_233245_001",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Divino",
+   "id": "234547-001",
+   "nombre": "MESA DE EXTERIOR - ACERO-Y-VIDRIO NEGRO MINHLA",
+   "precio": 1790.0,
+   "moneda": "UYU",
+   "url": "https://www.divino.com.uy/catalogo/mesa-de-exterior-acero-y-vidrio-negro-minhla_234547_001",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Divino",
+   "id": "276681-001",
+   "nombre": "GAZEBO - ACERO-Y-POLIESTER NATURAL-BEIGE DUBLO",
+   "precio": 8990.0,
+   "moneda": "UYU",
+   "url": "https://www.divino.com.uy/catalogo/gazebo-acero-y-poliester-natural-beige-dublo_276681_001",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Divino",
+   "id": "276718-001",
+   "nombre": "PROTECTOR DE MADERA - ALUMINIO EXTERIORES",
+   "precio": 2650.0,
+   "moneda": "UYU",
+   "url": "https://www.divino.com.uy/catalogo/protector-de-madera-aluminio-exteriores_276718_001",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Divino",
+   "id": "276735-001",
+   "nombre": "ESTANTERIA EXTERIOR - MADERA NATURAL-BEIGE VALENCIA",
+   "precio": 4990.0,
+   "moneda": "UYU",
+   "url": "https://www.divino.com.uy/catalogo/estanteria-exterior-madera-natural-beige-valencia_276735_001",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Divino",
+   "id": "278843-001",
+   "nombre": "BARBACOA HIBRIDA - ACERO-INOXIDABLE + FUNDA REGALO",
+   "precio": 690.0,
+   "moneda": "USD",
+   "url": "https://www.divino.com.uy/catalogo/barbacoa-hibrida-acero-inoxidable-funda-regalo_278843_001",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Divino",
+   "id": "276782-001",
+   "nombre": "SOMBRILLA MADERA - MADERA-Y-POLIESTER NATURAL-BEIGE BEVERLY",
+   "precio": 12990.0,
+   "moneda": "UYU",
+   "url": "https://www.divino.com.uy/catalogo/sombrilla-madera-madera-y-poliester-natural-beige-beverly_276782_001",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Divino",
+   "id": "276210-002",
+   "nombre": "SOMBRILLA ALUMINIO 2.75M - ALUMINIO AZUL LINWOOD",
+   "precio": 8990.0,
+   "moneda": "UYU",
+   "url": "https://www.divino.com.uy/catalogo/sombrilla-aluminio-2-75m-aluminio-azul-linwood_276210_002",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Divino",
+   "id": "276229-001",
+   "nombre": "BASE SOMBRILLA 85*85CM PE - POLIETILENO NEGRO CROSS",
+   "precio": 4490.0,
+   "moneda": "UYU",
+   "url": "https://www.divino.com.uy/catalogo/base-sombrilla-85-85cm-pe-polietileno-negro-cross_276229_001",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Divino",
+   "id": "271121-002",
+   "nombre": "SOMBRILLA - MADERA-Y-POLIESTER VERDE ALBURY",
+   "precio": 6490.0,
+   "moneda": "UYU",
+   "url": "https://www.divino.com.uy/catalogo/sombrilla-madera-y-poliester-verde-albury_271121_002",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Divino",
+   "id": "276778-001",
+   "nombre": "MESAS CENTRALES NIDO - ALUMINIO NEGRO EVEREST",
+   "precio": 15990.0,
+   "moneda": "UYU",
+   "url": "https://www.divino.com.uy/catalogo/mesas-centrales-nido-aluminio-negro-everest_276778_001",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  }
+ ],
+ "JYSK": [
+  {
+   "tienda": "JYSK",
+   "id": "3725194-3725194",
+   "nombre": "Sombrilla KELDERVIG Ø200 arena oscuro",
+   "precio": 3999.0,
+   "moneda": "UYU",
+   "url": "https://www.jysk.uy/jardin/sombrilla-keldervig-200-arena-oscuro_3725194_3725194",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "JYSK",
+   "id": "3725240-3725240",
+   "nombre": "Mesa de jardín DRAMMEN A100xAl210 teca",
+   "precio": 32999.0,
+   "moneda": "UYU",
+   "url": "https://www.jysk.uy/jardin/mesa-de-jardin-drammen-a100xal210-teca_3725240_3725240",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "JYSK",
+   "id": "3700401-3700401",
+   "nombre": "Silla apilable GRENAA gris",
+   "precio": 1899.0,
+   "moneda": "UYU",
+   "url": "https://www.jysk.uy/jardin/silla-apilable-grenaa-gris_3700401_3700401",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "JYSK",
+   "id": "6400095-6400095",
+   "nombre": "Maceta REDDIK 18x30x18 surtidos",
+   "precio": 439.0,
+   "moneda": "UYU",
+   "url": "https://www.jysk.uy/jardin/maceta-reddik-18x30x18-surtidos_6400095_6400095",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "JYSK",
+   "id": "6400106-6400106",
+   "nombre": "Maceta RINGTROST Ø37/32 kubu nat",
+   "precio": 3199.0,
+   "moneda": "UYU",
+   "url": "https://www.jysk.uy/jardin/maceta-ringtrost-37-32-kubu-nat_6400106_6400106",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "JYSK",
+   "id": "3726059-3726059",
+   "nombre": "Set jardín VEN 4 plazas negro",
+   "precio": 34999.0,
+   "moneda": "UYU",
+   "url": "https://www.jysk.uy/jardin/set-jardin-ven-4-plazas-negro_3726059_3726059",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "JYSK",
+   "id": "3725171-3725171",
+   "nombre": "Mesa de jardín VAMDRUP Ø120 gris.",
+   "precio": 19999.0,
+   "moneda": "UYU",
+   "url": "https://www.jysk.uy/jardin/mesa-de-jardin-vamdrup-120-gris_3725171_3725171",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "JYSK",
+   "id": "3726126-3726126",
+   "nombre": "Mesa de jardín RAUMA An.90xL140 arena oscuro",
+   "precio": 9999.0,
+   "moneda": "UYU",
+   "url": "https://www.jysk.uy/jardin/mesa-de-jardin-rauma-an-90xl140-arena-oscuro_3726126_3726126",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "JYSK",
+   "id": "6426001-6426001",
+   "nombre": "Manta de picnic SLAPPA 150x200 surtido",
+   "precio": 1099.0,
+   "moneda": "UYU",
+   "url": "https://www.jysk.uy/jardin/manta-de-picnic-slappa-150x200-surtido_6426001_6426001",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "JYSK",
+   "id": "3726184-3726184",
+   "nombre": "Juego de jardín LILLESTROEM 4 personas arena oscuro",
+   "precio": 41999.0,
+   "moneda": "UYU",
+   "url": "https://www.jysk.uy/jardin/juego-de-jardin-lillestroem-4-personas-arena-oscuro_3726184_3726184",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "JYSK",
+   "id": "3725005-3725005",
+   "nombre": "Mesa de jardín VATTRUP A95xL206/321 negro",
+   "precio": 28999.0,
+   "moneda": "UYU",
+   "url": "https://www.jysk.uy/jardin/mesa-de-jardin-vattrup-a95xl206-321-negro_3725005_3725005",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "JYSK",
+   "id": "3726191-3726191",
+   "nombre": "Mesa auxiliar UBJERG A46xL46xA46 madera dura",
+   "precio": 2399.0,
+   "moneda": "UYU",
+   "url": "https://www.jysk.uy/jardin/mesa-auxiliar-ubjerg-a46xl46xa46-madera-dura_3726191_3726191",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "JYSK",
+   "id": "3726212-3726212",
+   "nombre": "Mesa bistró SANDVIKA 65x65 negro",
+   "precio": 3199.0,
+   "moneda": "UYU",
+   "url": "https://www.jysk.uy/jardin/mesa-bistro-sandvika-65x65-negro_3726212_3726212",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "JYSK",
+   "id": "3750000-3750000",
+   "nombre": "Mesa plegable KULESKOG W75xL180 blanco",
+   "precio": 3899.0,
+   "moneda": "UYU",
+   "url": "https://www.jysk.uy/jardin/mesa-plegable-kuleskog-w75xl180-blanco_3750000_3750000",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "JYSK",
+   "id": "3726037-3726037",
+   "nombre": "Toldo vela HOLD-AN A250xL300 blanco",
+   "precio": 1399.0,
+   "moneda": "UYU",
+   "url": "https://www.jysk.uy/jardin/toldo-vela-hold-an-a250xl300-blanco_3726037_3726037",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  }
+ ],
+ "La Tentación": [
+  {
+   "tienda": "La Tentación",
+   "id": "15PETSOMMIERTITANIO1.38-15PETSOMMIERTITANIO1.38",
+   "nombre": "Conjunto Sommier 2 Plazas Titanio Petra Reversible Gris Oscuro",
+   "precio": 11467.0,
+   "moneda": "UYU",
+   "url": "https://www.latentacion.com.uy/hogar/conjunto-sommier-2-plazas-titanio-petra-reversible-gris-oscuro_15PETSOMMIERTITANIO1.38_15PETSOMMIERTITANIO1.38",
+   "precio_lista": 13490.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "La Tentación",
+   "id": "106ARTE1410-60-64-106ARTE1410-60-64",
+   "nombre": "Mueble Baño Luna + Bacha + Espejo Premium 15mm Nogal Cinamon",
+   "precio": 2871.0,
+   "moneda": "UYU",
+   "url": "https://www.latentacion.com.uy/hogar/mueble-bano-luna-bacha-espejo-premium-15mm-nogal-cinamon_106ARTE1410-60-64_106ARTE1410-60-64",
+   "precio_lista": 3190.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "La Tentación",
+   "id": "106ARTECOMBO1411-60-62-106ARTECOMBO1411-60-62",
+   "nombre": "Mueble Baño Luna + Bacha + Espejo Premium 15mm Marron Gris",
+   "precio": 2871.0,
+   "moneda": "UYU",
+   "url": "https://www.latentacion.com.uy/hogar/mueble-bano-luna-bacha-espejo-premium-15mm-marron-gris_106ARTECOMBO1411-60-62_106ARTECOMBO1411-60-62",
+   "precio_lista": 3190.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "La Tentación",
+   "id": "15HERARROLADO2P14-15HERARROLADO2P14",
+   "nombre": "Colchón Espuma Petra Levane 14 De 2 Plaza 188cm 138cm 14cm",
+   "precio": 3886.0,
+   "moneda": "UYU",
+   "url": "https://www.latentacion.com.uy/hogar/colchon-espuma-petra-levane-14-de-2-plaza-188cm-138cm-14cm_15HERARROLADO2P14_15HERARROLADO2P14",
+   "precio_lista": 4090.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "La Tentación",
+   "id": "113TENTATOKIOA-113TENTATOKIOA",
+   "nombre": "Banqueta Tokio Polipropileno Reforzado Interior Y Exterior Color Azul",
+   "precio": 3490.0,
+   "moneda": "UYU",
+   "url": "https://www.latentacion.com.uy/hogar/banqueta-tokio-polipropileno-reforzado-interior-y-exterior-color-azul_113TENTATOKIOA_113TENTATOKIOA",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "La Tentación",
+   "id": "113TENTATOKIOR-113TENTATOKIOR",
+   "nombre": "Banqueta Tokio Polipropileno Reforzado Interior Y Exterior Color Roja",
+   "precio": 3490.0,
+   "moneda": "UYU",
+   "url": "https://www.latentacion.com.uy/hogar/banqueta-tokio-polipropileno-reforzado-interior-y-exterior-color-roja_113TENTATOKIOR_113TENTATOKIOR",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "La Tentación",
+   "id": "113TENTATOKIOV-113TENTATOKIOV",
+   "nombre": "Banqueta Tokio Polipropileno Reforzado Interior Y Exterior Color Verde",
+   "precio": 3490.0,
+   "moneda": "UYU",
+   "url": "https://www.latentacion.com.uy/hogar/banqueta-tokio-polipropileno-reforzado-interior-y-exterior-color-verde_113TENTATOKIOV_113TENTATOKIOV",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "La Tentación",
+   "id": "42MOR2105AZ-42MOR2105AZ",
+   "nombre": "Silla Summer Alum 6 Posiciones Mor 2105 Azul",
+   "precio": 1960.0,
+   "moneda": "UYU",
+   "url": "https://www.latentacion.com.uy/hogar/silla-summer-alum-6-posiciones-mor-2105-azul_42MOR2105AZ_42MOR2105AZ",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "La Tentación",
+   "id": "113MAPSET4PPARIS-113MAPSET4PPARIS",
+   "nombre": "Juego De Jardín Paris 4 Piezas Sillon 2c + 2 De 1c Y Mesa Auxiliar Capuccino",
+   "precio": 11990.0,
+   "moneda": "UYU",
+   "url": "https://www.latentacion.com.uy/hogar/juego-de-jardin-paris-4-piezas-sillon-2c-2-de-1c-y-mesa-auxiliar-capuccino_113MAPSET4PPARIS_113MAPSET4PPARIS",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "La Tentación",
+   "id": "113TENTAOASISCAP-113TENTAOASISCAP",
+   "nombre": "Sillon Oasis Capuccino Con Almohadon Impermeable",
+   "precio": 2690.0,
+   "moneda": "UYU",
+   "url": "https://www.latentacion.com.uy/hogar/sillon-oasis-capuccino-con-almohadon-impermeable_113TENTAOASISCAP_113TENTAOASISCAP",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "La Tentación",
+   "id": "113TENTAOASISCAPx2-113TENTAOASISCAPx2",
+   "nombre": "Pack X2 Sillones Oasis Capuccino Con Almohadon Impermeable",
+   "precio": 4990.0,
+   "moneda": "UYU",
+   "url": "https://www.latentacion.com.uy/hogar/pack-x2-sillones-oasis-capuccino-con-almohadon-impermeable_113TENTAOASISCAPx2_113TENTAOASISCAPx2",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "La Tentación",
+   "id": "113TENTAOASISCAPx2MESA-113TENTAOASISCAPx2MESA",
+   "nombre": "Combo Sillones Oasis Con Mesa Capuccino X2 Con Almohadon Impermeable",
+   "precio": 5490.0,
+   "moneda": "UYU",
+   "url": "https://www.latentacion.com.uy/hogar/combo-sillones-oasis-con-mesa-capuccino-x2-con-almohadon-impermeable_113TENTAOASISCAPx2MESA_113TENTAOASISCAPx2MESA",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "La Tentación",
+   "id": "113TENTAOASISCAPx4-113TENTAOASISCAPx4",
+   "nombre": "Pack 4 Sillones De Jardin Pvc Oasis Color Capuccino",
+   "precio": 9990.0,
+   "moneda": "UYU",
+   "url": "https://www.latentacion.com.uy/hogar/pack-4-sillones-de-jardin-pvc-oasis-color-capuccino_113TENTAOASISCAPx4_113TENTAOASISCAPx4",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "La Tentación",
+   "id": "113TENTAOASISCAPx4MESA-113TENTAOASISCAPx4MESA",
+   "nombre": "Combo Sillones Oasis Con Mesa Grafito X4 Con Almohadon Impermeable",
+   "precio": 10490.0,
+   "moneda": "UYU",
+   "url": "https://www.latentacion.com.uy/hogar/combo-sillones-oasis-con-mesa-grafito-x4-con-almohadon-impermeable_113TENTAOASISCAPx4MESA_113TENTAOASISCAPx4MESA",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "La Tentación",
+   "id": "113TENTAOASISGRA-113TENTAOASISGRA",
+   "nombre": "Sillon Oasis Gris Grafito Con Almohadon Impermeable",
+   "precio": 2690.0,
+   "moneda": "UYU",
+   "url": "https://www.latentacion.com.uy/hogar/sillon-oasis-gris-grafito-con-almohadon-impermeable_113TENTAOASISGRA_113TENTAOASISGRA",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  }
+ ],
+ "Rústico Hogar": [
+  {
+   "tienda": "Rústico Hogar",
+   "id": "0000870--46504653",
+   "nombre": "Set De Jardín Mesa De Vidrio + 2 Sillas Símil Rattan - Beige",
+   "precio": 4290.0,
+   "moneda": "UYU",
+   "url": "https://rusticohogar.com.uy/catalogo/set-de-jardin-mesa-de-vidrio-2-sillas-simil-rattan-beige_0000870-_46504653",
+   "precio_lista": 5190.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Rústico Hogar",
+   "id": "0000870--46504654",
+   "nombre": "Set De Jardín Mesa De Vidrio + 2 Sillas Símil Rattan - Marron Oscuro",
+   "precio": 4290.0,
+   "moneda": "UYU",
+   "url": "https://rusticohogar.com.uy/catalogo/set-de-jardin-mesa-de-vidrio-2-sillas-simil-rattan-marron-oscuro_0000870-_46504654",
+   "precio_lista": 5190.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Rústico Hogar",
+   "id": "0000870--46504655",
+   "nombre": "Set De Jardín Mesa De Vidrio + 2 Sillas Símil Rattan - Negro",
+   "precio": 4290.0,
+   "moneda": "UYU",
+   "url": "https://rusticohogar.com.uy/catalogo/set-de-jardin-mesa-de-vidrio-2-sillas-simil-rattan-negro_0000870-_46504655",
+   "precio_lista": 5190.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Rústico Hogar",
+   "id": "0000871--46504656",
+   "nombre": "Set De Jardín Mesa De Vidrio + 2 Sillas Textilina y Acero - Gris",
+   "precio": 4490.0,
+   "moneda": "UYU",
+   "url": "https://rusticohogar.com.uy/catalogo/set-de-jardin-mesa-de-vidrio-2-sillas-textilina-y-acero-gris_0000871-_46504656",
+   "precio_lista": 5990.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Rústico Hogar",
+   "id": "0000871--46574650",
+   "nombre": "Set De Jardín Mesa De Vidrio + 2 Sillas Textilina y Acero - Negro",
+   "precio": 4490.0,
+   "moneda": "UYU",
+   "url": "https://rusticohogar.com.uy/catalogo/set-de-jardin-mesa-de-vidrio-2-sillas-textilina-y-acero-negro_0000871-_46574650",
+   "precio_lista": 5990.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Rústico Hogar",
+   "id": "46504651-46504651",
+   "nombre": "Set De Jardín Mesa De Vidrio + 2 Sillas Plegables",
+   "precio": 4290.0,
+   "moneda": "UYU",
+   "url": "https://rusticohogar.com.uy/catalogo/set-de-jardin-mesa-de-vidrio-2-sillas-plegables_46504651_46504651",
+   "precio_lista": 5190.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Rústico Hogar",
+   "id": "0000812--6763",
+   "nombre": "Galpón prefabricado Reforzado 1 Puerta JOY A - Gris",
+   "precio": 10990.0,
+   "moneda": "UYU",
+   "url": "https://rusticohogar.com.uy/catalogo/galpon-prefabricado-reforzado-1-puerta-joy-a-gris_0000812-_6763",
+   "precio_lista": 15990.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Rústico Hogar",
+   "id": "0000812--6764",
+   "nombre": "Galpón prefabricado Reforzado 1 Puerta JOY A - Aluminio",
+   "precio": 10990.0,
+   "moneda": "UYU",
+   "url": "https://rusticohogar.com.uy/catalogo/galpon-prefabricado-reforzado-1-puerta-joy-a-aluminio_0000812-_6764",
+   "precio_lista": 15990.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Rústico Hogar",
+   "id": "0000813--6765",
+   "nombre": "Galpón prefabricado Reforzado 2 Puertas JOY B - Gris",
+   "precio": 17690.0,
+   "moneda": "UYU",
+   "url": "https://rusticohogar.com.uy/catalogo/galpon-prefabricado-reforzado-2-puertas-joy-b-gris_0000813-_6765",
+   "precio_lista": 19990.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Rústico Hogar",
+   "id": "0000813--6766",
+   "nombre": "Galpón prefabricado Reforzado 2 Puertas JOY B - Aluminio",
+   "precio": 17690.0,
+   "moneda": "UYU",
+   "url": "https://rusticohogar.com.uy/catalogo/galpon-prefabricado-reforzado-2-puertas-joy-b-aluminio_0000813-_6766",
+   "precio_lista": 19990.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Rústico Hogar",
+   "id": "4363-4656-4363-4656",
+   "nombre": "Juego de Jardín Mesa Rectangular Urbanite + 6 Sillas de Acero y Ratán Gris",
+   "precio": 15990.0,
+   "moneda": "UYU",
+   "url": "https://rusticohogar.com.uy/catalogo/juego-de-jardin-mesa-rectangular-urbanite-6-sillas-de-acero-y-ratan-gris_4363-4656_4363-4656",
+   "precio_lista": 23330.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Rústico Hogar",
+   "id": "4657-4369-4657-4369",
+   "nombre": "Juego de Jardín Mesa Redonda Urbanite + 4 Sillas de Acero y Textilina Negra",
+   "precio": 14990.0,
+   "moneda": "UYU",
+   "url": "https://rusticohogar.com.uy/catalogo/juego-de-jardin-mesa-redonda-urbanite-4-sillas-de-acero-y-textilina-negra_4657-4369_4657-4369",
+   "precio_lista": 20450.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Rústico Hogar",
+   "id": "0000808--6755",
+   "nombre": "Galpón prefabricado Reforzado 2 Puertas ARCHER A - Gris",
+   "precio": 14190.0,
+   "moneda": "UYU",
+   "url": "https://rusticohogar.com.uy/catalogo/galpon-prefabricado-reforzado-2-puertas-archer-a-gris_0000808-_6755",
+   "precio_lista": 17890.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Rústico Hogar",
+   "id": "0000808--6756",
+   "nombre": "Galpón prefabricado Reforzado 2 Puertas ARCHER A - Aluminio",
+   "precio": 14190.0,
+   "moneda": "UYU",
+   "url": "https://rusticohogar.com.uy/catalogo/galpon-prefabricado-reforzado-2-puertas-archer-a-aluminio_0000808-_6756",
+   "precio_lista": 17890.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  },
+  {
+   "tienda": "Rústico Hogar",
+   "id": "0000809--6757",
+   "nombre": "Galpón prefabricado Reforzado 2 Puertas ARCHER B - Gris",
+   "precio": 17690.0,
+   "moneda": "UYU",
+   "url": "https://rusticohogar.com.uy/catalogo/galpon-prefabricado-reforzado-2-puertas-archer-b-gris_0000809-_6757",
+   "precio_lista": 19990.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Jardín"
+   }
+  }
+ ],
+ "Balton": [
+  {
+   "tienda": "Balton",
+   "id": "67379546685681",
+   "nombre": "Silla Selene - Madera Maciza - Madera/Lino Beige",
+   "precio": 3590.0,
+   "moneda": "UYU",
+   "url": "https://balton.com.uy/products/silla-selene-madera-maciza-1?variant=67379546685681",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Balton",
+   "id": "48708260462833",
+   "nombre": "Poltrona Elia c/Patas de Madera - 9500",
+   "precio": 14390.0,
+   "moneda": "UYU",
+   "url": "https://balton.com.uy/products/poltrona-elia-c-patas-de-madera?variant=48708260462833",
+   "precio_lista": 19090.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Balton",
+   "id": "67287948919025",
+   "nombre": "Cuadro Obra Tivo 120x80cm",
+   "precio": 14700.0,
+   "moneda": "UYU",
+   "url": "https://balton.com.uy/products/cuadro-obra-tivo-120x80cm?variant=67287948919025",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Balton",
+   "id": "67287294247153",
+   "nombre": "Juego de Comedor Valen 160 con 6 Sillas Olin",
+   "precio": 40790.0,
+   "moneda": "UYU",
+   "url": "https://balton.com.uy/products/juego-de-comedor-valen-160-con-6-sillas-olin?variant=67287294247153",
+   "precio_lista": 45230.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Balton",
+   "id": "67287232479473",
+   "nombre": "Juego de Comedor Valen 160 con 6 Sillas Dann",
+   "precio": 39690.0,
+   "moneda": "UYU",
+   "url": "https://balton.com.uy/products/juego-de-comedor-valen-160-con-6-sillas?variant=67287232479473",
+   "precio_lista": 44030.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Balton",
+   "id": "67287059988721",
+   "nombre": "Juego de Comedor Valen 160 con 6 Sillas Inari",
+   "precio": 43190.0,
+   "moneda": "UYU",
+   "url": "https://balton.com.uy/products/juego-de-comedor-valen-160-con-6-sillas-inari?variant=67287059988721",
+   "precio_lista": 48230.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Balton",
+   "id": "67287041442033",
+   "nombre": "Juego de Comedor Oslo  con 4 sillas Dann",
+   "precio": 33990.0,
+   "moneda": "UYU",
+   "url": "https://balton.com.uy/products/juego-de-comedor-oslo-con-4-sillas-dann?variant=67287041442033",
+   "precio_lista": 37610.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Balton",
+   "id": "67287018799345",
+   "nombre": "Juego de Comedor Oslo con 4 Sillas Inari",
+   "precio": 36290.0,
+   "moneda": "UYU",
+   "url": "https://balton.com.uy/products/juego-de-comedor-oslo-con-4-sillas-inari?variant=67287018799345",
+   "precio_lista": 40410.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Balton",
+   "id": "67271597588721",
+   "nombre": "Juego de comedor Oslo con 4 sillas Olin",
+   "precio": 34790.0,
+   "moneda": "UYU",
+   "url": "https://balton.com.uy/products/juego-de-comedor-oslo-con-4-sillas-olin?variant=67271597588721",
+   "precio_lista": 38410.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Balton",
+   "id": "67261118972145",
+   "nombre": "Juego de Comedor 1.60cm Odin con 4 sillas Olin",
+   "precio": 46490.0,
+   "moneda": "UYU",
+   "url": "https://balton.com.uy/products/juego-de-comedor-1-20-odin-con-4-sillas-olin?variant=67261118972145",
+   "precio_lista": 51550.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Balton",
+   "id": "67235135389937",
+   "nombre": "Sofa Modular Florencia - 2 Asientos + 1 Puff - B-9500",
+   "precio": 28790.0,
+   "moneda": "UYU",
+   "url": "https://balton.com.uy/products/sofa-modular-florencia-2-asientos-1-puff?variant=67235135389937",
+   "precio_lista": 38190.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Balton",
+   "id": "67235148366065",
+   "nombre": "Sofa Modular Florencia Esquinero - 2 Asientos + 1 Puff + 1 Esquinero - B-9500",
+   "precio": 40990.0,
+   "moneda": "UYU",
+   "url": "https://balton.com.uy/products/sofa-modular-florencia-esquinero-2-asientos-1-puff-1-esquinero?variant=67235148366065",
+   "precio_lista": 54590.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Balton",
+   "id": "67235165372657",
+   "nombre": "Sofa Modular Florencia Esquinero - 4 Asientos + 1 Puff + 1 Esquinero - B-9500",
+   "precio": 61490.0,
+   "moneda": "UYU",
+   "url": "https://balton.com.uy/products/sofa-modular-florencia-esquinero-4-asientos-1-puff-1-esquinero?variant=67235165372657",
+   "precio_lista": 81590.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Balton",
+   "id": "48678911082737",
+   "nombre": "Rack Ripado Ole TV hasta 70 pulgadas Madera Maciza 3 Puertas - Freijo",
+   "precio": 16390.0,
+   "moneda": "UYU",
+   "url": "https://balton.com.uy/products/rack-ripado-ole-tv-hasta-70-pulgadas-madera-maciza-3-puertas-freijo?variant=48678911082737",
+   "precio_lista": null,
+   "disponible": false,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Balton",
+   "id": "48678911115505",
+   "nombre": "Rack Ripado Ole TV hasta 70 pulgadas Madera Maciza 3 Puertas - Nogal",
+   "precio": 16390.0,
+   "moneda": "UYU",
+   "url": "https://balton.com.uy/products/rack-ripado-ole-tv-hasta-70-pulgadas-madera-maciza-3-puertas-freijo?variant=48678911115505",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  }
+ ],
+ "MundoShop": [
+  {
+   "tienda": "MundoShop",
+   "id": "46232905253043",
+   "nombre": "Reflector Foco Led 10w Luz Fria Exterior Ip66 X10 Negro - Único",
+   "precio": 2590.0,
+   "moneda": "UYU",
+   "url": "https://mundoshop.com.uy/products/reflector-foco-led-10w-luz-fria-exterior-ip66-x10-negro?variant=46232905253043",
+   "precio_lista": 3200.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "MundoShop",
+   "id": "46232904859827",
+   "nombre": "Reflector Foco Led 10w Luz Fria Exterior Ip66 X20 Negro - Único",
+   "precio": 5180.0,
+   "moneda": "UYU",
+   "url": "https://mundoshop.com.uy/products/reflector-foco-led-10w-luz-fria-exterior-ip66-x20-negro?variant=46232904859827",
+   "precio_lista": 6400.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "MundoShop",
+   "id": "46232904401075",
+   "nombre": "Armario Multiuso Repisa Placard Biblioteca Estetico San Jose Marrón Claro - Blanco",
+   "precio": 2290.0,
+   "moneda": "UYU",
+   "url": "https://mundoshop.com.uy/products/armario-multiuso-repisa-placard-biblioteca-estetico-san-jose-marron-claro?variant=46232904401075",
+   "precio_lista": 4290.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "MundoShop",
+   "id": "46232904433843",
+   "nombre": "Armario Multiuso Repisa Placard Biblioteca Estetico San Jose Marrón Claro - CAS",
+   "precio": 2290.0,
+   "moneda": "UYU",
+   "url": "https://mundoshop.com.uy/products/armario-multiuso-repisa-placard-biblioteca-estetico-san-jose-marron-claro?variant=46232904433843",
+   "precio_lista": 4290.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "MundoShop",
+   "id": "46232904466611",
+   "nombre": "Armario Multiuso Repisa Placard Biblioteca Estetico San Jose Marrón Claro - Negro",
+   "precio": 2290.0,
+   "moneda": "UYU",
+   "url": "https://mundoshop.com.uy/products/armario-multiuso-repisa-placard-biblioteca-estetico-san-jose-marron-claro?variant=46232904466611",
+   "precio_lista": 4290.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "MundoShop",
+   "id": "46232903844019",
+   "nombre": "Coche Londres Bebé Plegable 4 Ruedas Paseo Liviano Compacto Negro - Azul",
+   "precio": 3500.0,
+   "moneda": "UYU",
+   "url": "https://mundoshop.com.uy/products/coche-londres-bebe-plegable-4-ruedas-paseo-liviano-compacto-negro?variant=46232903844019",
+   "precio_lista": 4250.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "MundoShop",
+   "id": "46232903876787",
+   "nombre": "Coche Londres Bebé Plegable 4 Ruedas Paseo Liviano Compacto Negro - Negro",
+   "precio": 3500.0,
+   "moneda": "UYU",
+   "url": "https://mundoshop.com.uy/products/coche-londres-bebe-plegable-4-ruedas-paseo-liviano-compacto-negro?variant=46232903876787",
+   "precio_lista": 4250.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "MundoShop",
+   "id": "46232807178419",
+   "nombre": "Set Mancuerna Bosco Ajustable + Barra 30 Kg Total Negro - Único",
+   "precio": 1290.0,
+   "moneda": "UYU",
+   "url": "https://mundoshop.com.uy/products/set-mancuerna-bosco-ajustable-barra-30-kg-total-negro?variant=46232807178419",
+   "precio_lista": 1600.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "MundoShop",
+   "id": "46203967799475",
+   "nombre": "Juego de comedor 4 sillas con mesa redonda",
+   "precio": 12990.0,
+   "moneda": "UYU",
+   "url": "https://mundoshop.com.uy/products/juego-de-comedor-4-sillas-con-mesa-redonda?variant=46203967799475",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "MundoShop",
+   "id": "46203967766707",
+   "nombre": "Juego de Comedor 4 Sillas Eames - Blanco",
+   "precio": 8990.0,
+   "moneda": "UYU",
+   "url": "https://mundoshop.com.uy/products/juego-de-comedor-4-sillas-eames?variant=46203967766707",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "MundoShop",
+   "id": "46203966292147",
+   "nombre": "Silla Tolix reforzada con asiento de madera - Negro",
+   "precio": 1290.0,
+   "moneda": "UYU",
+   "url": "https://mundoshop.com.uy/products/silla-tolix-reforzada-con-asiento-de-madera?variant=46203966292147",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "MundoShop",
+   "id": "46203966619827",
+   "nombre": "Silla Tolix reforzada con asiento de madera - Blanco",
+   "precio": 1290.0,
+   "moneda": "UYU",
+   "url": "https://mundoshop.com.uy/products/silla-tolix-reforzada-con-asiento-de-madera?variant=46203966619827",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "MundoShop",
+   "id": "46126169424051",
+   "nombre": "Pack X4 Enredadera Jardín Vertical Artificial Pared 40x60cm Verde Oscuro - Único",
+   "precio": 928.0,
+   "moneda": "UYU",
+   "url": "https://mundoshop.com.uy/products/pack-x4-enredadera-jardin-vertical-artificial-pared-40x60cm-verde-oscuro?variant=46126169424051",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "MundoShop",
+   "id": "46126168866995",
+   "nombre": "Bicicleta Montaña Rodado 29 Con 21 Velocidad Aro 29 Premium Color Rojo Tamaño Del Cuadro 29 - Azul",
+   "precio": 8490.0,
+   "moneda": "UYU",
+   "url": "https://mundoshop.com.uy/products/bicicleta-montana-rodado-29-con-21-velocidad-aro-29-premium-color-rojo-tamano-del-cuadro-29?variant=46126168866995",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "MundoShop",
+   "id": "46126168899763",
+   "nombre": "Bicicleta Montaña Rodado 29 Con 21 Velocidad Aro 29 Premium Color Rojo Tamaño Del Cuadro 29 - Naranja",
+   "precio": 8490.0,
+   "moneda": "UYU",
+   "url": "https://mundoshop.com.uy/products/bicicleta-montana-rodado-29-con-21-velocidad-aro-29-premium-color-rojo-tamano-del-cuadro-29?variant=46126168899763",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  }
+ ],
+ "Arredo": [
+  {
+   "tienda": "Arredo",
+   "id": "17892",
+   "nombre": "Juego de Toalla y Toallón Raffaela Color Gris claro - 48X80 70X135",
+   "precio": 1090.0,
+   "moneda": "UYU",
+   "url": "https://www.arredo.com.uy/juego-de-toalla-y-toallon-raffaela-300078985/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Arredo",
+   "id": "18040",
+   "nombre": "Juego de Toalla y Toallón Raffaela Color Blanco - 48X80 70X135",
+   "precio": 1090.0,
+   "moneda": "UYU",
+   "url": "https://www.arredo.com.uy/juego-de-toalla-y-toallon-raffaela-300078985/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Arredo",
+   "id": "18053",
+   "nombre": "Juego de Toalla y Toallón Raffaela Color Beige - 48X80 70X135",
+   "precio": 1090.0,
+   "moneda": "UYU",
+   "url": "https://www.arredo.com.uy/juego-de-toalla-y-toallon-raffaela-300078985/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Arredo",
+   "id": "20481",
+   "nombre": "Juego de Toalla y Toallón Raffaela Color Verde - 48X80 70X135",
+   "precio": 1090.0,
+   "moneda": "UYU",
+   "url": "https://www.arredo.com.uy/juego-de-toalla-y-toallon-raffaela-300078985/p",
+   "precio_lista": null,
+   "disponible": false,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Arredo",
+   "id": "21130",
+   "nombre": "Juego de Toalla y Toallón Raffaela Color Gris oscuro - 48X80 70X135",
+   "precio": 1090.0,
+   "moneda": "UYU",
+   "url": "https://www.arredo.com.uy/juego-de-toalla-y-toallon-raffaela-300078985/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Arredo",
+   "id": "22122",
+   "nombre": "Juego de Toalla y Toallón Raffaela Color Azul claro - 48X80 70X135",
+   "precio": 1090.0,
+   "moneda": "UYU",
+   "url": "https://www.arredo.com.uy/juego-de-toalla-y-toallon-raffaela-300078985/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Arredo",
+   "id": "22123",
+   "nombre": "Juego de Toalla y Toallón Raffaela Color Verde oscuro - 48X80 70X135",
+   "precio": 1090.0,
+   "moneda": "UYU",
+   "url": "https://www.arredo.com.uy/juego-de-toalla-y-toallon-raffaela-300078985/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Arredo",
+   "id": "23464",
+   "nombre": "Juego de Toalla y Toallón Raffaela Color Ladrillo - 48X80 70X135",
+   "precio": 1090.0,
+   "moneda": "UYU",
+   "url": "https://www.arredo.com.uy/juego-de-toalla-y-toallon-raffaela-300078985/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Arredo",
+   "id": "17004",
+   "nombre": "Toallón con Rombos Color Beige - 90X150",
+   "precio": 990.0,
+   "moneda": "UYU",
+   "url": "https://www.arredo.com.uy/toallon-con-rombos-320175330/p",
+   "precio_lista": null,
+   "disponible": false,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Arredo",
+   "id": "17024",
+   "nombre": "Toallón con Rombos Color Blanco - 90X150",
+   "precio": 990.0,
+   "moneda": "UYU",
+   "url": "https://www.arredo.com.uy/toallon-con-rombos-320175330/p",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Arredo",
+   "id": "17026",
+   "nombre": "Toallón con Rombos Color Gris - 90X150",
+   "precio": 990.0,
+   "moneda": "UYU",
+   "url": "https://www.arredo.com.uy/toallon-con-rombos-320175330/p",
+   "precio_lista": null,
+   "disponible": false,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Arredo",
+   "id": "17048",
+   "nombre": "Toallón con Rombos Color Verde - 90X150",
+   "precio": 990.0,
+   "moneda": "UYU",
+   "url": "https://www.arredo.com.uy/toallon-con-rombos-320175330/p",
+   "precio_lista": null,
+   "disponible": false,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Arredo",
+   "id": "17657",
+   "nombre": "Toallón con Rombos Color Gris claro - 90X150",
+   "precio": 990.0,
+   "moneda": "UYU",
+   "url": "https://www.arredo.com.uy/toallon-con-rombos-320175330/p",
+   "precio_lista": null,
+   "disponible": false,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Arredo",
+   "id": "19777",
+   "nombre": "Toallón con Rombos Color Terracota - 90X150",
+   "precio": 990.0,
+   "moneda": "UYU",
+   "url": "https://www.arredo.com.uy/toallon-con-rombos-320175330/p",
+   "precio_lista": null,
+   "disponible": false,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Arredo",
+   "id": "17003",
+   "nombre": "Toallón con Rombos Color Gris claro - 70X135",
+   "precio": 890.0,
+   "moneda": "UYU",
+   "url": "https://www.arredo.com.uy/toallon-con-rombos-320175330/p",
+   "precio_lista": null,
+   "disponible": false,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  }
+ ],
+ "Multiahorro / Tata": [
+  {
+   "tienda": "Multiahorro / Tata",
+   "id": "112417",
+   "nombre": "Bocina Para Bicicleta",
+   "precio": 20.0,
+   "moneda": "UYU",
+   "url": "https://www.tata.com.uy/bocina-para-bicicleta-112417/p",
+   "precio_lista": 29.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Multiahorro / Tata",
+   "id": "10003",
+   "nombre": "Destornillador Sl4 100 Mm Hometech",
+   "precio": 29.0,
+   "moneda": "UYU",
+   "url": "https://www.tata.com.uy/destornillador-sl4-100-mm-hometech-10003/p",
+   "precio_lista": 29.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Multiahorro / Tata",
+   "id": "19141",
+   "nombre": "Pincel 1 1/2´´Hometech",
+   "precio": 35.0,
+   "moneda": "UYU",
+   "url": "https://www.tata.com.uy/pincel-1-1-2--hometech-19141/p",
+   "precio_lista": 35.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Multiahorro / Tata",
+   "id": "20595",
+   "nombre": "Máscara Para Pintar Hometech",
+   "precio": 39.0,
+   "moneda": "UYU",
+   "url": "https://www.tata.com.uy/mascara-para-pintar-hometech-20595/p",
+   "precio_lista": 39.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Multiahorro / Tata",
+   "id": "10847",
+   "nombre": "Cinta Aisladora Beta",
+   "precio": 49.0,
+   "moneda": "UYU",
+   "url": "https://www.tata.com.uy/cinta-aisladora-beta-10847/p",
+   "precio_lista": 49.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Multiahorro / Tata",
+   "id": "132517",
+   "nombre": "Pasador 2.5 Hometech",
+   "precio": 59.0,
+   "moneda": "UYU",
+   "url": "https://www.tata.com.uy/pasador-2-5-hometech-132517/p",
+   "precio_lista": 59.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Multiahorro / Tata",
+   "id": "4558",
+   "nombre": "Lampara Philips Clara 100W",
+   "precio": 59.0,
+   "moneda": "UYU",
+   "url": "https://www.tata.com.uy/lampara-philips-clara-100w-4558/p",
+   "precio_lista": 59.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Multiahorro / Tata",
+   "id": "9192",
+   "nombre": "Cinta Empaque Transparente",
+   "precio": 79.0,
+   "moneda": "UYU",
+   "url": "https://www.tata.com.uy/cinta-empaque-transparente-9192/p",
+   "precio_lista": 79.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Multiahorro / Tata",
+   "id": "13767",
+   "nombre": "Candado Con Llave 40 Mm",
+   "precio": 79.0,
+   "moneda": "UYU",
+   "url": "https://www.tata.com.uy/candado-con-llave-40-mm-13767/p",
+   "precio_lista": 79.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Multiahorro / Tata",
+   "id": "11514",
+   "nombre": "Cinta Scotch 3M 12 Mm x 66 M",
+   "precio": 79.0,
+   "moneda": "UYU",
+   "url": "https://www.tata.com.uy/cinta-scotch-3m-12-mm-x-66-m-11514/p",
+   "precio_lista": 79.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Multiahorro / Tata",
+   "id": "170893",
+   "nombre": "Pegamento Bic Strong 3 Gr",
+   "precio": 89.0,
+   "moneda": "UYU",
+   "url": "https://www.tata.com.uy/pegamento-bic-strong-3-gr-170893/p",
+   "precio_lista": 89.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Multiahorro / Tata",
+   "id": "174909",
+   "nombre": "Lámpara Hometech Led Fría 7 W",
+   "precio": 89.0,
+   "moneda": "UYU",
+   "url": "https://www.tata.com.uy/lampara-hometech-led-fria-7-w-1000025516-174909/p",
+   "precio_lista": 89.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Multiahorro / Tata",
+   "id": "162057",
+   "nombre": "Pegamil Instantaneo Blister 2 Gr",
+   "precio": 89.0,
+   "moneda": "UYU",
+   "url": "https://www.tata.com.uy/pegamil-instantaneo-blister-2-gr-162057/p",
+   "precio_lista": 89.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Multiahorro / Tata",
+   "id": "174912",
+   "nombre": "Lámpara Hometech Led Cálida 7 W",
+   "precio": 89.0,
+   "moneda": "UYU",
+   "url": "https://www.tata.com.uy/lampara-hometech-led-calida-7-w-1000025515-174912/p",
+   "precio_lista": 89.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Multiahorro / Tata",
+   "id": "112403",
+   "nombre": "Porta Botellas Para Bicicletas",
+   "precio": 89.0,
+   "moneda": "UYU",
+   "url": "https://www.tata.com.uy/porta-botellas-para-bicicletas-112403/p",
+   "precio_lista": 89.0,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  }
+ ],
+ "Disco": [
+  {
+   "tienda": "Disco",
+   "id": "342238",
+   "nombre": "Pellet Nacional MOLF 15 kg Certificado",
+   "precio": 309.0,
+   "moneda": "UYU",
+   "url": "https://www.disco.com.uy/product/pellet-nacional-molf-15-kg-certificado/342238",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Disco",
+   "id": "478855",
+   "nombre": "Pellet de madera PIOMADE 15 kg",
+   "precio": 425.0,
+   "moneda": "UYU",
+   "url": "https://www.disco.com.uy/product/pellet-de-madera-piomade-15-kg/478855",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Disco",
+   "id": "352245",
+   "nombre": "Pila alcalina EVEREADY Gold AAA",
+   "precio": 45.0,
+   "moneda": "UYU",
+   "url": "https://www.disco.com.uy/product/pila-alcalina-eveready-gold-aaa/352245",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Disco",
+   "id": "305481",
+   "nombre": "Tierra preparada 1 L",
+   "precio": 39.0,
+   "moneda": "UYU",
+   "url": "https://www.disco.com.uy/product/tierra-preparada-1-l/305481",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Disco",
+   "id": "352244",
+   "nombre": "Pila alcalina EVEREADY Gold AA",
+   "precio": 45.0,
+   "moneda": "UYU",
+   "url": "https://www.disco.com.uy/product/pila-alcalina-eveready-gold-aa/352244",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Disco",
+   "id": "305479",
+   "nombre": "Cortacésped BRICOTECH Eléctrica 1200 W New",
+   "precio": 139.0,
+   "moneda": "USD",
+   "url": "https://www.disco.com.uy/product/cortacesped-bricotech-electrica-1200-w-new/305479",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Disco",
+   "id": "690421",
+   "nombre": "Pintura Latex Interior BRICOTECH 10 L",
+   "precio": 959.0,
+   "moneda": "UYU",
+   "url": "https://www.disco.com.uy/product/pintura-latex-interior-bricotech-10-l/690421",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Disco",
+   "id": "772988",
+   "nombre": "Encendedor CLIPPER cp 22",
+   "precio": 40.0,
+   "moneda": "UYU",
+   "url": "https://www.disco.com.uy/product/encendedor-clipper-cp-22/772988",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Disco",
+   "id": "532749",
+   "nombre": "Kit HYUNDAI Taladro + Amoladora",
+   "precio": 85.0,
+   "moneda": "USD",
+   "url": "https://www.disco.com.uy/product/kit-hyundai-taladro-amoladora/532749",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Disco",
+   "id": "342823",
+   "nombre": "Jardinera Negra 1,6 L",
+   "precio": 35.0,
+   "moneda": "UYU",
+   "url": "https://www.disco.com.uy/product/jardinera-negra-1-6-l/342823",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Disco",
+   "id": "342156",
+   "nombre": "Compost Premium 1 L",
+   "precio": 39.0,
+   "moneda": "UYU",
+   "url": "https://www.disco.com.uy/product/compost-premium-1-l/342156",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Disco",
+   "id": "532520",
+   "nombre": "Desmalezadora BRICOTECH 43 cc Nafta",
+   "precio": 139.0,
+   "moneda": "USD",
+   "url": "https://www.disco.com.uy/product/desmalezadora-bricotech-43-cc-nafta/532520",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Disco",
+   "id": "455663",
+   "nombre": "Vaso Vino 440 cc Ámbar PASABAHCE Vidrio",
+   "precio": 40.0,
+   "moneda": "UYU",
+   "url": "https://www.disco.com.uy/product/vaso-vino-440-cc-ambar-pasabahce-vidrio/455663",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Disco",
+   "id": "441404",
+   "nombre": "Copa Elysia Champagne 260 cc PASABAHCE",
+   "precio": 40.0,
+   "moneda": "UYU",
+   "url": "https://www.disco.com.uy/product/copa-elysia-champagne-260-cc-pasabahce/441404",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Disco",
+   "id": "441403",
+   "nombre": "Copa Timeless Champagne 175 cc PASABAHCE",
+   "precio": 40.0,
+   "moneda": "UYU",
+   "url": "https://www.disco.com.uy/product/copa-timeless-champagne-175-cc-pasabahce/441403",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  }
+ ],
+ "Geant": [
+  {
+   "tienda": "Geant",
+   "id": "478855",
+   "nombre": "Pellet de madera PIOMADE 15 kg",
+   "precio": 425.0,
+   "moneda": "UYU",
+   "url": "https://www.geant.com.uy/product/pellet-de-madera-piomade-15-kg/478855",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Geant",
+   "id": "352245",
+   "nombre": "Pila alcalina EVEREADY Gold AAA",
+   "precio": 30.0,
+   "moneda": "UYU",
+   "url": "https://www.geant.com.uy/product/pila-alcalina-eveready-gold-aaa/352245",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Geant",
+   "id": "305265",
+   "nombre": "Pintura HOME LEADER 10 L Interior",
+   "precio": 1799.0,
+   "moneda": "UYU",
+   "url": "https://www.geant.com.uy/product/pintura-home-leader-10-l-interior/305265",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Geant",
+   "id": "305481",
+   "nombre": "Tierra preparada 1 L",
+   "precio": 30.0,
+   "moneda": "UYU",
+   "url": "https://www.geant.com.uy/product/tierra-preparada-1-l/305481",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Geant",
+   "id": "910206",
+   "nombre": "Scooter Eléctrico XIAOMI 6",
+   "precio": 759.0,
+   "moneda": "USD",
+   "url": "https://www.geant.com.uy/product/scooter-electrico-xiaomi-6/910206",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Geant",
+   "id": "352244",
+   "nombre": "Pila alcalina EVEREADY Gold AA",
+   "precio": 30.0,
+   "moneda": "UYU",
+   "url": "https://www.geant.com.uy/product/pila-alcalina-eveready-gold-aa/352244",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Geant",
+   "id": "910704",
+   "nombre": "Scooter Eléctrico XIAOMI 6 Essential",
+   "precio": 529.0,
+   "moneda": "USD",
+   "url": "https://www.geant.com.uy/product/scooter-electrico-xiaomi-6-essential/910704",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Geant",
+   "id": "305479",
+   "nombre": "Cortacésped BRICOTECH Eléctrica 1200 W New",
+   "precio": 139.0,
+   "moneda": "USD",
+   "url": "https://www.geant.com.uy/product/cortacesped-bricotech-electrica-1200-w-new/305479",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Geant",
+   "id": "690421",
+   "nombre": "Pintura Latex Interior BRICOTECH 10 L",
+   "precio": 1299.0,
+   "moneda": "UYU",
+   "url": "https://www.geant.com.uy/product/pintura-latex-interior-bricotech-10-l/690421",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Geant",
+   "id": "772988",
+   "nombre": "Encendedor CLIPPER cp 22",
+   "precio": 30.0,
+   "moneda": "UYU",
+   "url": "https://www.geant.com.uy/product/encendedor-clipper-cp-22/772988",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Geant",
+   "id": "532749",
+   "nombre": "Kit HYUNDAI Taladro + Amoladora",
+   "precio": 85.0,
+   "moneda": "USD",
+   "url": "https://www.geant.com.uy/product/kit-hyundai-taladro-amoladora/532749",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Geant",
+   "id": "342823",
+   "nombre": "Jardinera Negra 1,6 L",
+   "precio": 30.0,
+   "moneda": "UYU",
+   "url": "https://www.geant.com.uy/product/jardinera-negra-1-6-l/342823",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Ferretería"
+   }
+  },
+  {
+   "tienda": "Geant",
+   "id": "455663",
+   "nombre": "Vaso Vino 440 cc Ámbar PASABAHCE Vidrio",
+   "precio": 40.0,
+   "moneda": "UYU",
+   "url": "https://www.geant.com.uy/product/vaso-vino-440-cc-ambar-pasabahce-vidrio/455663",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Geant",
+   "id": "441404",
+   "nombre": "Copa Elysia Champagne 260 cc PASABAHCE",
+   "precio": 40.0,
+   "moneda": "UYU",
+   "url": "https://www.geant.com.uy/product/copa-elysia-champagne-260-cc-pasabahce/441404",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  },
+  {
+   "tienda": "Geant",
+   "id": "441403",
+   "nombre": "Copa Timeless Champagne 175 cc PASABAHCE",
+   "precio": 40.0,
+   "moneda": "UYU",
+   "url": "https://www.geant.com.uy/product/copa-timeless-champagne-175-cc-pasabahce/441403",
+   "precio_lista": null,
+   "disponible": true,
+   "extra": {
+    "rubro": "Hogar"
+   }
+  }
+ ]
+}
