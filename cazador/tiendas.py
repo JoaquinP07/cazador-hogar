@@ -414,6 +414,14 @@ TIENDAS: dict[str, Callable[[], list[Producto]]] = {
         (HOGAR, lambda: vtex("El Dorado", "https://www.eldorado.com.uy", fq="C:/6/")),
         (JARDIN, lambda: vtex("El Dorado", "https://www.eldorado.com.uy", fq="C:/9/")),  # Temporada
     ),
+    "AMV Store": mezcla(
+        (JARDIN, lambda: fenicio("AMV Store", "https://amvstore.com.uy", [
+            "ferreteria/jardin", "hogar-muebles-y-jardin/muebles-de-jardin",
+            "hogar-muebles-y-jardin/parrillas-y-accesorios", "hogar-muebles-y-jardin/camping",
+        ])),
+        (FERRETERIA, lambda: fenicio("AMV Store", "https://amvstore.com.uy", ["ferreteria"])),
+        (HOGAR, lambda: fenicio("AMV Store", "https://amvstore.com.uy", ["hogar-muebles-y-jardin"])),
+    ),
     "El Emporio del Hogar": mezcla((HOGAR, lambda: magento("El Emporio del Hogar", "https://www.elemporiodelhogar.com.uy"))),
     "El Clon": mezcla((HOGAR, lambda: fenicio("El Clon", "https://www.elclon.com.uy", ["hogar", "tiempo-libre"]))),
     "Divino": mezcla(
