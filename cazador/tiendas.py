@@ -447,6 +447,7 @@ TIENDAS: dict[str, Callable[[], list[Producto]]] = {
             "textiles-del-hogar", "iluminacion", "decoracion", "sale",
         ])),
     ),
+    "Soho Deco": mezcla((HOGAR, lambda: fenicio("Soho Deco", "https://sohodeco.com.uy", ["catalogo"]))),  # ~580 productos
     "Balton": mezcla((HOGAR, lambda: shopify("Balton", "https://balton.com.uy"))),
     "MundoShop": mezcla((HOGAR, lambda: shopify("MundoShop", "https://mundoshop.com.uy"))),
     "Arredo": mezcla((HOGAR, lambda: vtex("Arredo", "https://www.arredo.com.uy"))),
