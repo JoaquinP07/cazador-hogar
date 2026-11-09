@@ -18,3 +18,14 @@ su propio historial y su propia programación.
 Settings → Secrets and variables → Actions.
 
 **Revisión de prueba:** Actions → Cazador Hogar → Run workflow → tildar *prueba*. Manda un resumen por Telegram.
+
+## Comandos por Telegram
+
+El bot contesta en unos segundos (solo al chat configurado en `TELEGRAM_CHAT_ID`). En un grupo, escribí el comando con el nombre del bot (por ejemplo `/lista@cazador_hogar_joaquin_bot`).
+
+- `/buscar taladro` → las 10 más baratas entre todas las tiendas. Con `oferta` al final, las que más bajaron; con `historico`, las que están en su precio mínimo registrado.
+- `/agregar https://tienda.com.uy cats=seccion1,seccion2` → suma una tienda si usa Fenicio o Shopify. En las tiendas Fenicio hay que elegir las secciones.
+- `/quitar nombre` y `/reanudar nombre` → sacan o pausan una tienda.
+- `/lista` → tiendas que se revisan y cuántos productos tiene cada una.
+
+Las tiendas agregadas y pausadas se guardan en `estado/control.json` (en el mismo caché que el historial).
