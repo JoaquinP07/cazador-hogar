@@ -55,7 +55,7 @@ def moneda(sim: str) -> str:
 
 
 # ---------------------------------------------------------------- Fenicio
-# (Arocena, El Clon, Divino, JYSK, La Tentación, Brillante, Rústico Hogar)
+# (Arocena, El Clon, Divino, JYSK, La Tentación, Brillante)
 _IT = re.compile(r"<div class='it [^']*' data-disp='(\d)' data-codProd='([^']+)' data-codVar='([^']+)'")
 
 
@@ -439,13 +439,6 @@ TIENDAS: dict[str, Callable[[], list[Producto]]] = {
     "La Tentación": mezcla(
         (HOGAR, lambda: fenicio("La Tentación", "https://www.latentacion.com.uy", ["hogar"])),
         (FERRETERIA, lambda: fenicio("La Tentación", "https://www.latentacion.com.uy", ["construccion"])),
-    ),
-    "Rústico Hogar": mezcla(
-        (JARDIN, lambda: fenicio("Rústico Hogar", "https://rusticohogar.com.uy", ["jardin-exterior"])),
-        (HOGAR, lambda: fenicio("Rústico Hogar", "https://rusticohogar.com.uy", [
-            "living", "comedor", "dormitorio", "oficina", "cocina", "bazar-y-deco", "colchones-y-sommiers",
-            "textiles-del-hogar", "iluminacion", "decoracion", "sale",
-        ])),
     ),
     "Soho Deco": mezcla((HOGAR, lambda: fenicio("Soho Deco", "https://sohodeco.com.uy", ["catalogo"]))),  # ~580 productos
     "Balton": mezcla((HOGAR, lambda: shopify("Balton", "https://balton.com.uy"))),

@@ -4,7 +4,7 @@ Revisa precios de ferretería y artículos para el hogar en tiendas de Uruguay c
 y avisa por Telegram con el bot **@cazador_hogar_joaquin_bot** cuando aparece un posible error de precio.
 Cada aviso dice si es de 🔧 Ferretería, 🏠 Hogar o 🌿 Jardín.
 
-**Tiendas:** Sodimac, Ferretería Arocena, El Dorado, AMV Store, El Emporio del Hogar, El Clon, Divino, JYSK, La Tentación, Rústico Hogar, Soho Deco,
+**Tiendas:** Sodimac, Ferretería Arocena, El Dorado, AMV Store, El Emporio del Hogar, El Clon, Divino, JYSK, La Tentación, Soho Deco,
 Balton, MundoShop, Arredo, Multiahorro / Tata, Disco y Geant (estas dos últimas, solo 12 productos por categoría).
 
 **Cuándo avisa:** cuando un producto baja 40% o más respecto a su precio habitual, o aparece nuevo con 60% o más
